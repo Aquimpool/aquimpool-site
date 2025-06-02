@@ -1,0 +1,154 @@
+/* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #1c1d25;
+  padding-top: 120px; /* Ajusta según altura de tu nav */
+}
+
+.top-header {
+    background-color: #121315;
+    color: white;
+    font-size: 13px;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+
+  .hide-top-header {
+    transform: translateY(-100%);
+  }
+
+  .top-header .left span {
+    margin-right: 20px;
+  }
+
+  .top-header .right a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .top-header .right a:hover {
+    color: #0e5292;
+  }
+
+  /* Menu de navegacion */
+  .main-nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    z-index: 999;
+    transition: box-shadow 0.3s ease, top 0.3s ease;
+  }
+
+  .main-nav.shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #0e5292;
+  }
+
+  .logo i {
+    margin-right: 10px;
+    font-size: 26px;
+  }
+
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .nav-menu li {
+    height: 100%;
+  }
+
+  .nav-menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 16px;
+    text-decoration: none;
+    color: #1c1d3e;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .nav-menu li a:hover,
+  .nav-menu li a.active {
+    background-color: #0e5292;
+    color: white;
+    border: none;
+    border-radius: 0;
+  }
+
+  .btn-client {
+    background-color: #0e5292;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-client:hover {
+    background-color: #032b4f;
+  } 
+
+/*seccion en mantenimeinto*/
+.maintenance-section {
+  background-color: #2b2c2e;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.maintenance-section .container {
+  margin: 0 auto;
+}
+
+.maintenance-section img {
+  max-width: 23%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.maintenance-section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.maintenance-section p {
+  font-size: 18px;
+  line-height: 1.6;
+}
