@@ -1,0 +1,202 @@
+    /* RESET GENERAL */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #1c1d25;
+      padding-top: 120px; /* Ajusta según altura de tu nav */
+    }
+
+    /* ------------------ TOP HEADER ------------------ */
+    .top-header {
+      background-color: #252525;
+      color: white;
+      font-size: 13px;
+      padding: 10px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .hide-top-header {
+      transform: translateY(-100%);
+    }
+
+    .top-header .left span {
+      margin-right: 20px;
+    }
+
+    .top-header .right a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .top-header .right a:hover {
+      color: #0e5292;
+    }
+
+    /* ------------------ MAIN NAV ------------------ */
+    
+    
+    .main-nav {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      height: 83px;
+      width: 100%;
+      position: fixed;
+      top: 37px;
+      left: 0;
+      z-index: 999;
+      transition: box-shadow 0.3s ease, top 0.3s ease;
+    }
+
+    .main-nav.shadow {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 24px;
+      color: #0e5292;
+    }
+
+    .logo i {
+      margin-right: 10px;
+      font-size: 26px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .nav-menu li {
+      height: 100%;
+    }
+
+    .nav-menu li a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0 16px;
+      text-decoration: none;
+      color: #1c1d3e;
+      font-weight: 600;
+      font-size: 16px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+      background-color: #0e5292;
+      color: white;
+      border: none;
+      border-radius: 0;
+    }
+
+    .btn-client-container {
+      margin-left: 20px;
+    }
+
+    .btn-client {
+      background-color: #0e5292;
+      color: white;
+      padding: 10px 25px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-client:hover {
+      background-color: #032b4f;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 40px;
+      cursor: pointer;
+      color: #0e5292;
+      margin-left: 20px;
+    }
+
+    /* ------------------ RESPONSIVE ------------------ */
+    @media (max-width: 768px) {
+          body {
+    padding-top: 80px;
+  }
+
+  .main-nav {
+    top: 0; /* ← Corregido aquí */
+  }
+      
+        .top-header {
+        display: none;
+      }
+
+      .btn-client-container {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-menu {
+    display: none; /* Oculta el menú inicialmente */
+    flex-direction: column;
+    width: 100%;
+    background-color: white; /* Fondo blanco para evitar transparencia */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    transition: all 0.3s ease;
+    position: fixed; /* Asegura que cubra toda la pantalla */
+    top: 80px; /* Ajusta para coincidir con la altura del header */
+    left: 0;
+    height: calc(60vh - 80px); /* Calcula el espacio restante debajo del header */
+    z-index: 998;
+    overflow-y: auto; /* Permite scroll si el menú es más largo que la pantalla */
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .nav-menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+      }
+
+      .nav-menu li a {
+        padding: 15px 0;
+      }
+
+      .main-nav {
+        padding: 0 10px;
+      }
+
+      .logo span {
+        font-size: 18px;
+      }
+    }

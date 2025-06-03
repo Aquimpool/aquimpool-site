@@ -8,59 +8,69 @@
   <script src="https://kit.fontawesome.com/7331698cb2.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="js/script.js"></script>
+  <script src="js/scriptMenu.js"></script>
 
 </head>
 <body>
 <!-- HTML: Barra superior + Navegación -->
-<!-- Barra superior -->
-<header class="top-header">
-  <div class="left">
-    <span><i class="fa-solid fa-phone"></i> 0983032939 - 0989111478</span>
-    <span>|</span>
-    <span><i class="fas fa-envelope"></i> aquimpool.ec@gmail.com</span>
-  </div>
-  <div class="right">
-    <a href="https://www.facebook.com/PiscinasAquimpool.ec/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/aquimpool.ec/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://twitter.com/tuempresa" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://linkedin.com/company/tuempresa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://youtube.com/@tuempresa" target="_blank"><i class="fab fa-youtube"></i></a>
-  </div>
-</header>
+  <!-- Barra superior -->
+  <header class="top-header">
+    <div class="left">
+      <span><i class="fa-solid fa-phone"></i> 0983032939 - 0989111478</span>
+      <span>|</span>
+      <span><i class="fas fa-envelope"></i> aquimpool.ec@gmail.com</span>
+    </div>
+    <div class="right">
+      <a href="https://www.facebook.com/PiscinasAquimpool.ec/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/aquimpool.ec/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/tuempresa" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://linkedin.com/company/tuempresa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://youtube.com/@tuempresa" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </header>
 
-<!-- Barra de navegación -->
-<nav class="main-nav">
-  <div class="logo">
-    <i class="fas fa-truck"></i>
-    <span>AQUIMPOOL piscinas</span>
-  </div>
-  <ul class="nav-menu">
-    <li><a href="#" class="active">Inicio</a></li>
-    <li><a href="acercade.html">Nosotros</a></li>
-    <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="productos.html">Productos</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-  <a href="#" class="btn-client">Soy cliente</a>
-</nav>
+  <!-- Barra de navegación -->
+  <nav class="main-nav">
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/LOGO AQUIMPOOL1.png" alt="logo de la empresa" width="80" height="45">
+      </a>
+      <span>AQUIMPOOL</span>
+    </div>
+
+    <ul class="nav-menu">
+      <li><a href="#" class="active">Inicio</a></li>
+      <li><a href="acercade.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <!-- Botón cliente -->
+    <div class="btn-client-container">
+      <a href="#" class="btn-client">Soy cliente</a>
+    </div>
+
+    <!-- Menú hamburguesa -->
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
 
 <!-- Sección Hero / Banner Principal -->
-<section class="hero">
+<section class="hero-section">
   <div class="hero-content">
-    <h1>Soluciones integrales para piscinas con AQUIMPOOL</h1>
-    <p>Especialistas en construcción, mantenimiento, reparación y venta de equipos para piscinas residenciales y familiares.</p>
-    <a href="#" class="btn-hero">Conoce nuestros servicios</a>
-  </div>
-  <div class="hero-image">
-    <!-- Reemplaza la ruta de abajo con la tuya, por ejemplo: img/hero.jpg -->
-    <img src="img/banner-principal.jpg" alt="Imagen principal de servicios logísticos de Aquimpool" />
+    <h1 class="hero-title">Soluciones integrales para piscinas con AQUIMPOOL</h1>
+    <p class="hero-subtitle">Calidad y profesionalismo a tu alcance.</p>
+    <a href="servicios.html" class="hero-button">Conoce nuestros servicios</a>
   </div>
 </section>
 
 <!-- Sección Sobre Nosotros -->
 <section class="about-section">
   <div class="about-image">
-    <!-- Reemplaza con tu imagen cuadrada -->
+    <!-- Reemplaza con tu imagen -->
     <img src="img/sobre-nosotros.jpg" alt="Equipo de trabajo de Aquimpool" />
     <div class="experience-box">
       <strong>Más de 20 años de experiencia</strong>
@@ -70,15 +80,16 @@
     <h4>SOBRE NOSOTROS</h4>
     <h2>Tu aliado confiable en proyectos de piscina</h2>
     <p>
-      En AQUIMPOOL somos una empresa ecuatoriana con más de 20 años brindando soluciones integrales para piscinas.
+      En <strong>AQUIMPOOL</strong> somos una empresa ecuatoriana con más de <strong>20</strong> años brindando soluciones integrales para piscinas.
       Nos especializamos en construcción personalizada, mantenimiento profesional, venta de equipos de alta calidad y
       reparación técnica. Nuestro compromiso es ofrecer confianza, puntualidad y resultados impecables en cada proyecto.
     </p>
-    <a href="#" class="btn-video">
+    <a href="https://www.instagram.com/p/DAHvK7Rs4m3/" class="btn-video">
       <i class="fas fa-play"></i> Ver presentación
     </a>
   </div>
 </section>
+
 
 <!-- Sección formulario -->
 <section class="quote-section">
@@ -86,7 +97,11 @@
     <div class="quote-info">
       <h4>Solicite una cotización</h4>
       <h2>Obtenga un presupuesto gratuito</h2>
-      <p>En Aquimpool combinamos tecnología, experiencia y pasión para brindarte soluciones personalizadas para tu piscina. ¡Contáctanos y descubre cómo podemos ayudarte!</p>
+      <p>
+        En Aquimpool combinamos tecnología, experiencia y pasión para brindarte
+        soluciones personalizadas para tu piscina. ¡Contáctanos y descubre cómo
+        podemos ayudarte!
+      </p>
 
       <div class="quote-stats">
         <div>
@@ -104,29 +119,33 @@
       </div>
     </div>
 
-<div class="quote-form">
-  <form>
-    <input type="text" placeholder="Su nombre" required>
-    <input type="email" placeholder="Su correo electrónico" required>
-    <input type="tel" placeholder="Su número de teléfono" required>
+    <div class="quote-form">
+      <form>
+        <input type="text" placeholder="Su nombre" required />
+        <input type="email" placeholder="Su correo electrónico" required />
+        <input type="tel" placeholder="Su número de teléfono" required />
 
-    <select required>
-      <option value="">Seleccione un servicio</option>
-      <option>Construcción de piscinas</option>
-      <option>Mantenimiento</option>
-      <option>Automatización</option>
-      <option>Instalación hidráulica</option>
-      <option>Remodelación</option>
-      <option>Otros servicios</option>
-    </select>
+        <select required>
+          <option value="">Seleccione un servicio</option>
+          <option>Construcción de piscinas</option>
+          <option>Mantenimiento</option>
+          <option>Automatización</option>
+          <option>Instalación hidráulica</option>
+          <option>Remodelación</option>
+          <option>Otros servicios</option>
+        </select>
 
-    <textarea placeholder="Describa brevemente lo que necesita..." rows="2"></textarea>
+        <textarea
+          placeholder="Describa brevemente lo que necesita..."
+          rows="2"
+        ></textarea>
 
-    <button type="submit">Solicitar cotización</button>
-  </form>
-</div>
-
+        <button type="submit">Solicitar cotización</button>
+      </form>
+    </div>
+  </div>
 </section>
+
 
 <!--Seccion servicios -->
 <section class="services-section">
@@ -141,7 +160,7 @@
         <span>Mantenimiento de Piscinas</span>
       </div>
       <p>Eliminamos residuos, balanceamos el pH, desinfectamos y aplicamos productos seguros para una experiencia saludable.</p>
-      <a href="#">Leer más</a>
+      <a href="servicios.html#servicio-piscinas">Leer más...</a>
     </div>
     <div class="service-card">
       <div class="service-top">
@@ -149,7 +168,7 @@
         <span>Construcción de Piscinas</span>
       </div>
       <p>Diseño y construcción de piscinas personalizadas con materiales duraderos y acabados profesionales.</p>
-      <a href="#">Leer más</a>
+      <a href="servicios.html#servicio-construccion">Leer más</a>
     </div>
     <div class="service-card">
       <div class="service-top">
@@ -170,12 +189,12 @@
   </div>
 </section>
 
-<!--Seccion porque elegirnos -->
+<!-- Sección por qué elegirnos -->
 <section class="why-us-section">
   <div class="container">
     <div class="why-us-content">
       <div class="why-us-image">
-        <img src="img/piscina-servicio.jpg" alt="Servicios Aquimpool">
+        <img src="img/piscina-servicio.jpg" alt="Servicios Aquimpool" />
       </div>
       <div class="why-us-text">
         <h5>¿POR QUÉ ELEGIRNOS?</h5>
@@ -188,11 +207,13 @@
           <li><i class="fas fa-headset"></i> Respuesta rápida y atención personalizada</li>
           <li><i class="fas fa-shield-alt"></i> Garantía y seguimiento continuo</li>
         </ul>
-        <a href="#" class="btn-primary">Más información</a>
+        <a href="acercade.html" class="btn-primary">Más información</a>
       </div>
     </div>
   </div>
 </section>
+
+
 
 <!-- seccion, Nuestro equipo -->
 <section class="team-section">
@@ -200,10 +221,10 @@
   <h2 class="heading">Conozca a nuestro equipo - Aquimpool</h2>
   <div class="team-container">
     <div class="team-member">
-      <img src="img/equipo1.jpg" alt="Miembro del equipo">
+      <img src="img/Aquimpool piscinas - Ivan Nieves.jpg" alt="Miembro del equipo">
       <div class="member-info">
-        <h3>Nombre completo</h3>
-        <p>Designación</p>
+        <h3>Jorge Nieves Azua</h3>
+        <p>Contratista - Jefe de obras</p>
       </div>
       <div class="overlay">
         <div class="social-icons">
@@ -297,11 +318,11 @@
     <div class="footer-column">
       <h3>Enlaces rápidos</h3>
       <ul>
-        <li><a href="#">- Inicio</a></li>
-        <li><a href="#">- Acerca de</a></li>
-        <li><a href="#">- Nuestros servicios</a></li>
-        <li><a href="#">- Plan de precios</a></li>
-        <li><a href="#">- Contáctenos</a></li>
+        <li><a href="index.html">- Inicio</a></li>
+        <li><a href="acercade.html">- Nosotros</a></li>
+        <li><a href="servicios.html">- Servicios</a></li>
+        <li><a href="productos.html">- Productos</a></li>
+        <li><a href="contacto.html">- Contáctenos</a></li>
       </ul>
     </div>
 
@@ -326,7 +347,11 @@
   </div>
 </footer>
 
+  <!-- Flotante de whatsapp -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://w.app/aquimpoolpiscinas" class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
 
-  <script src="js/script.js"></script>
 </body>
 </html>

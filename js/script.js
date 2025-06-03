@@ -31,3 +31,13 @@ window.addEventListener('scroll', function () {
     document.getElementById('nav-menu').classList.toggle('active');
   });
 
+   //JavaScript del menú 
+ 
+    const toggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+
