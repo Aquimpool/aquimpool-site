@@ -1059,3 +1059,51 @@
   }
 }
 
+/*Cookies*/
+/* Banner de Cookies */
+#cookie-banner {
+    position: fixed;
+    bottom: -150px; /* Inicialmente oculto */
+    left: 0;
+    right: 0;
+    background-color: #0e5292;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    z-index: 1000;
+    font-size: 16px;
+    border-top: 5px solid #ffffff;
+    transition: bottom 1s ease-in-out; /* Animación más lenta */
+}
+
+/* Mostrar el banner */
+#cookie-banner.show {
+    bottom: 0; /* Mueve el banner a su posición visible */
+}
+
+/* Botones del Banner */
+#cookie-banner .buttons {
+    margin-top: 10px;
+}
+
+#cookie-banner button {
+    background-color: white;
+    color: #0e5292;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#cookie-banner button:hover {
+    background-color: #0e5292;
+    color: white;
+    transform: scale(1.1); /* Crece un poco al pasar el cursor */
+}
+
+#cookie-banner button:active {
+    transform: scale(0.95); /* Disminuye ligeramente al hacer clic */
+}
