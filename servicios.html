@@ -16,90 +16,105 @@
     <script src="js/script.js"></script>
     <script src="js/scriptMenu.js"></script>
 
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Aquimpool Piscinas",
-  "image": "https://aquimpool.netlify.app/img/LOGO%20AQUIMPOOL1.png",
-  "telephone": "0983032939",
-  "email": "aquimpool.ec@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Av. Principal 1234",
-    "addressLocality": "Guayaquil",
-    "addressRegion": "Guayas",
-    "postalCode": "090112",
-    "addressCountry": "EC"
-  },
-  "url": "https://aquimpool.netlify.app/servicios",
-  "description": "Descubre los servicios de Aquimpool: construcción de piscinas, mantenimiento, instalación de equipos, automatización y más.",
-  "service": [
+  "@graph": [
     {
       "@type": "Service",
-      "name": "Construcción de Piscinas",
-      "description": "Diseñamos y construimos piscinas personalizadas con los más altos estándares de calidad. Ideal para hogares, clubes y espacios comerciales.",
+      "serviceType": "Construcción de piscinas",
+      "description": "Diseño y construcción de piscinas personalizadas con materiales de alta calidad y acabados duraderos.",
+      "url": "https://aquimpool.netlify.app/servicios",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Aquimpool Piscinas"
+        "name": "Aquimpool",
+        "telephone": "0983032939",
+        "email": "aquimpool.ec@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Guayaquil",
+          "addressRegion": "Guayas",
+          "addressCountry": "EC"
+        }
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Guayaquil, Samborondón, Quito y a nivel nacional"
       }
     },
     {
       "@type": "Service",
-      "name": "Mantenimiento de Piscinas",
-      "description": "Incluye limpieza profunda, control de niveles químicos, revisión de filtros y bombas.",
+      "serviceType": "Mantenimiento de piscinas",
+      "description": "Mantenimiento regular y correctivo para garantizar la limpieza, desinfección y funcionamiento óptimo de su piscina.",
+      "url": "https://aquimpool.netlify.app/servicios",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Aquimpool Piscinas"
+        "name": "Aquimpool"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Ecuador"
       }
     },
     {
       "@type": "Service",
-      "name": "Automatización",
-      "description": "Automatizamos sistemas de piscinas para un manejo eficiente y sencillo.",
+      "serviceType": "Reparación de piscinas",
+      "description": "Diagnóstico y reparación de filtraciones, grietas y fallas en el sistema hidráulico o estructural de la piscina.",
+      "url": "https://aquimpool.netlify.app/servicios",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Aquimpool Piscinas"
+        "name": "Aquimpool"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Ecuador"
       }
     },
     {
       "@type": "Service",
-      "name": "Instalación Hidráulica",
-      "description": "Soluciones completas de instalación hidráulica para garantizar el flujo adecuado del agua.",
+      "serviceType": "Remodelación de piscinas",
+      "description": "Actualización de piscinas existentes con nuevos acabados, iluminación LED y sistemas modernos.",
+      "url": "https://aquimpool.netlify.app/servicios",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Aquimpool Piscinas"
+        "name": "Aquimpool"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Ecuador"
       }
     },
     {
       "@type": "Service",
-      "name": "Remodelación de Piscinas",
-      "description": "Actualizamos el diseño y funcionalidad de su piscina para adaptarla a sus necesidades.",
+      "serviceType": "Instalación hidráulica para piscinas",
+      "description": "Instalación profesional de tuberías, bombas y sistemas de recirculación para el correcto funcionamiento del sistema hidráulico.",
+      "url": "https://aquimpool.netlify.app/servicios",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Aquimpool Piscinas"
+        "name": "Aquimpool"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Ecuador"
       }
     },
     {
       "@type": "Service",
-      "name": "Otros Servicios",
-      "description": "Ofrecemos una variedad de servicios adicionales para el mantenimiento y construcción de piscinas.",
+      "serviceType": "Instalación de equipos para piscinas",
+      "description": "Colocación de equipos como bombas, filtros, luces LED, automatización y calentadores para piscinas.",
+      "url": "https://aquimpool.netlify.app/servicios",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Aquimpool Piscinas"
+        "name": "Aquimpool"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Ecuador"
       }
     }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/PiscinasAquimpool.ec",
-    "https://www.instagram.com/aquimpool.ec/",
-    "https://twitter.com/tuempresa",
-    "https://linkedin.com/company/tuempresa",
-    "https://youtube.com/@tuempresa"
   ]
 }
 </script>
-
 
 
 </head>
