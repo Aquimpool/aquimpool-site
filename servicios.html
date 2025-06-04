@@ -15,104 +15,97 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <script src="js/script.js"></script>
     <script src="js/scriptMenu.js"></script>
-
-    <script type="application/ld+json">
+  
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
+  "@type": "Service",
+  "serviceType": "Servicios de Piscinas",
+  "provider": {
+    "@type": "Organization",
+    "name": "Aquimpool Piscinas",
+    "url": "https://aquimpool.netlify.app/servicios",
+    "logo": "https://aquimpool.netlify.app/img/LOGO%20AQUIMPOOL1.png",
+    "email": "aquimpool.ec@gmail.com",
+    "telephone": "0983032939",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Guayaquil",
+      "addressCountry": "EC"
+    }
+  },
+  "areaServed": [
     {
-      "@type": "Service",
-      "serviceType": "Construcción de piscinas",
-      "description": "Diseño y construcción de piscinas personalizadas con materiales de alta calidad y acabados duraderos.",
-      "url": "https://aquimpool.netlify.app/servicios",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Aquimpool",
-        "telephone": "0983032939",
-        "email": "aquimpool.ec@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Guayaquil",
-          "addressRegion": "Guayas",
-          "addressCountry": "EC"
+      "@type": "Place",
+      "name": "Guayaquil"
+    },
+    {
+      "@type": "Place",
+      "name": "Samborondón"
+    },
+    {
+      "@type": "Place",
+      "name": "Quito"
+    },
+    {
+      "@type": "Place",
+      "name": "Ecuador"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Catálogo de Servicios",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Construcción de Piscinas",
+          "description": "Diseño y construcción de piscinas personalizadas con materiales duraderos y acabados de alta calidad."
         }
       },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Guayaquil, Samborondón, Quito y a nivel nacional"
-      }
-    },
-    {
-      "@type": "Service",
-      "serviceType": "Mantenimiento de piscinas",
-      "description": "Mantenimiento regular y correctivo para garantizar la limpieza, desinfección y funcionamiento óptimo de su piscina.",
-      "url": "https://aquimpool.netlify.app/servicios",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Aquimpool"
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mantenimiento de Piscinas",
+          "description": "Limpieza profunda, control químico, revisión de filtros y bombas para piscinas residenciales y comerciales."
+        }
       },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Ecuador"
-      }
-    },
-    {
-      "@type": "Service",
-      "serviceType": "Reparación de piscinas",
-      "description": "Diagnóstico y reparación de filtraciones, grietas y fallas en el sistema hidráulico o estructural de la piscina.",
-      "url": "https://aquimpool.netlify.app/servicios",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Aquimpool"
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Instalación Hidráulica",
+          "description": "Montaje de sistemas de tuberías y conexión eficiente para piscinas y jacuzzis."
+        }
       },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Ecuador"
-      }
-    },
-    {
-      "@type": "Service",
-      "serviceType": "Remodelación de piscinas",
-      "description": "Actualización de piscinas existentes con nuevos acabados, iluminación LED y sistemas modernos.",
-      "url": "https://aquimpool.netlify.app/servicios",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Aquimpool"
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Reparación de Piscinas",
+          "description": "Solución de fallas, filtraciones y problemas eléctricos en piscinas."
+        }
       },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Ecuador"
-      }
-    },
-    {
-      "@type": "Service",
-      "serviceType": "Instalación hidráulica para piscinas",
-      "description": "Instalación profesional de tuberías, bombas y sistemas de recirculación para el correcto funcionamiento del sistema hidráulico.",
-      "url": "https://aquimpool.netlify.app/servicios",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Aquimpool"
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Remodelación de Piscinas",
+          "description": "Modernización del diseño, acabados y sistemas de funcionamiento de piscinas."
+        }
       },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Ecuador"
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Instalación de Equipos",
+          "description": "Instalación de bombas, filtros, luces LED y climatizadores con equipos certificados."
+        }
       }
-    },
-    {
-      "@type": "Service",
-      "serviceType": "Instalación de equipos para piscinas",
-      "description": "Colocación de equipos como bombas, filtros, luces LED, automatización y calentadores para piscinas.",
-      "url": "https://aquimpool.netlify.app/servicios",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Aquimpool"
-      },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Ecuador"
-      }
-    }
-  ]
+    ]
+  }
 }
 </script>
 
