@@ -102,7 +102,7 @@
       height: 100%;
       padding: 0 16px;
       text-decoration: none;
-      color: #1c1d3e;
+      color: #1c1c1c;
       font-weight: 600;
       font-size: 16px;
       transition: background-color 0.3s ease, color 0.3s ease;
@@ -114,6 +114,12 @@
       color: white;
       border: none;
       border-radius: 0;
+    }
+
+    .submenu li a.active{
+      background-color: #e5e5e5;
+      color: #2f2f2f;
+      font-weight: 510;
     }
 
     .btn-client-container {
@@ -139,6 +145,56 @@
       color: #0e5292;
       margin-left: 20px;
     }
+
+  .has-submenu {
+    position: relative;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(246, 246, 246);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 240px;
+    z-index: 999;
+    list-style: none;  /* ← Esto elimina los puntos */
+  }
+
+  .submenu li {
+    border-bottom: 1px solid #eee;
+  }
+
+  .submenu li a {
+    padding: 10px 16px;
+    display: block;
+    color: #1c1d3e;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .submenu li a:hover {
+    background-color: #0e5292;
+    color: white;
+  }
+
+  .has-submenu:hover .submenu {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .has-submenu .submenu {
+      position: static;
+      box-shadow: none;
+      background-color: white;
+    }
+
+    .submenu li a {
+      padding-left: 30px;
+    }
+  }
+
 
     /* ------------------ RESPONSIVE ------------------ */
     @media (max-width: 768px) {
@@ -200,6 +256,7 @@
         font-size: 18px;
       }
     }
+
 
   /*Secciones de servicios*/
   .service {

@@ -10,3 +10,4 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error("No se encontraron los elementos .menu-toggle o .nav-menu en el DOM.");
   }
 });
+

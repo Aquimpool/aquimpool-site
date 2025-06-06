@@ -6,32 +6,68 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 <url>
-  <loc>https://aquimpool.netlify.app/</loc>
-  <lastmod>2025-06-03T23:19:33+00:00</lastmod>
+  <loc>https://aquimpool.com.ec/</loc>
+  <lastmod>2025-06-06T03:26:55+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://aquimpool.netlify.app/acercade</loc>
-  <lastmod>2025-06-03T23:19:33+00:00</lastmod>
+  <loc>https://aquimpool.com.ec/acercade.html</loc>
+  <lastmod>2025-06-06T03:26:55+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://aquimpool.netlify.app/servicios</loc>
-  <lastmod>2025-06-03T23:19:33+00:00</lastmod>
+  <loc>https://aquimpool.com.ec/servicios.html</loc>
+  <lastmod>2025-06-06T03:26:57+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://aquimpool.netlify.app/productos</loc>
-  <lastmod>2025-06-03T23:19:33+00:00</lastmod>
+  <loc>https://aquimpool.com.ec/mantenimiento-de-piscinas.html</loc>
+  <lastmod>2025-06-06T03:26:56+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://aquimpool.netlify.app/contacto</loc>
-  <lastmod>2025-06-03T23:19:33+00:00</lastmod>
+  <loc>https://aquimpool.com.ec/construccion-de-piscinas.html</loc>
+  <lastmod>2025-06-06T03:26:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aquimpool.com.ec/instalacion-hidraulica-de-piscinas-y-o-jacuzzi.html</loc>
+  <lastmod>2025-06-06T03:26:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aquimpool.com.ec/remodelacion-de-piscinas.html</loc>
+  <lastmod>2025-06-06T03:26:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aquimpool.com.ec/reparacion-de-piscinas.html</loc>
+  <lastmod>2025-06-06T03:26:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aquimpool.com.ec/instalacion-de-equipos-de-piscinas.html</loc>
+  <lastmod>2025-06-06T03:26:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aquimpool.com.ec/productos.html</loc>
+  <lastmod>2025-06-06T03:26:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aquimpool.com.ec/contacto.html</loc>
+  <lastmod>2025-06-06T03:26:56+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>

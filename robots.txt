@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://aquimpool.netlify.app/sitemap.xml
+Sitemap: https://aquimpool.com.ec/sitemap.xml

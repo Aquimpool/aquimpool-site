@@ -9,7 +9,21 @@
   <meta name="author" content="Aquimpool Piscinas">
   <meta name="robots" content="index, follow">
 
-  <Link rel="icon" href="img/Icono.png" type="image/x-icon"></Link>
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="Aquimpool - Expertos en Piscinas en Ecuador" />
+  <meta property="og:description" content="Soluciones completas para tu piscina o jacuzzi: mantenimiento, construcción y productos químicos." />
+  <meta property="og:image" content="https://aquimpool.com.ec/img/logo-aquimpool2" />
+  <meta property="og:url" content="https://aquimpool.com.ec/" />
+  <meta property="og:type" content="website" />
+
+  <!-- favicon -->
+<link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+<link rel="shortcut icon" href="/img/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Aquimpool" />
+<link rel="manifest" href="/img/site.webmanifest" />
+
   <link rel="stylesheet" href="css/styles.css" />
   <script src="https://kit.fontawesome.com/7331698cb2.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -22,8 +36,8 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "AQUIMPOOL PISCINAS",
-  "image": "https://aquimpool.netlify.app/img/LOGO%20AQUIMPOOL1.png",
-  "url": "https://aquimpool.netlify.app/",
+  "image": "https://aquimpool.com.ec/img/LOGO%20AQUIMPOOL1.png",
+  "url": "https://aquimpool.com.ec/",
   "telephone": "0983032939",
   "email": "aquimpool.ec@gmail.com",
   "address": {
@@ -42,8 +56,8 @@
     "https://linkedin.com/company/tuempresa",
     "https://youtube.com/@tuempresa"
   ],
-  "description": "AQUIMPOOL PISCINAS: Soluciones integrales para piscinas en Ecuador. Construcción, mantenimiento y equipos de alta calidad. Más de 20 años de experiencia.",
-  "logo": "https://aquimpool.netlify.app/img/LOGO%20AQUIMPOOL1.png"
+  "description": "Soluciones integrales para piscinas en Ecuador. Construcción, mantenimiento y equipos de alta calidad. Más de 20 años de experiencia.",
+  "logo": "https://aquimpool.com.ec/img/LOGO%20AQUIMPOOL1.png"
 }
 </script>
 
@@ -76,13 +90,23 @@
       <span>AQUIMPOOL</span>
     </div>
 
-    <ul class="nav-menu">
-      <li><a href="#" class="active">Inicio</a></li>
-      <li><a href="acercade.html">Nosotros</a></li>
-      <li><a href="servicios.html">Servicios</a></li>
-      <li><a href="productos.html">Productos</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+  <ul class="nav-menu">
+    <li><a href="index.html" class="active">Inicio</a></li>
+    <li><a href="acercade.html">Nosotros</a></li>
+    <li class="has-submenu">
+      <a href="servicios.html">Servicios</a>
+      <ul class="submenu">
+        <li><a href="mantenimiento-de-piscinas.html">Mantenimiento de Piscinas</a></li>
+        <li><a href="construccion-de-piscinas.html">Construcción de Piscinas</a></li>
+        <li><a href="instalacion-hidraulica-de-piscinas-y-o-jacuzzi.html">Instalación Hidráulica</a></li>        
+        <li><a href="remodelacion-de-piscinas.html">Remodelación de Piscinas</a></li>
+        <li><a href="reparacion-de-piscinas.html">Reparación de Piscinas</a></li>
+        <li><a href="instalacion-de-equipos-de-piscinas.html" >Instalación de equipos</a></li>
+      </ul>
+    </li>
+    <li><a href="productos.html">Productos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
 
     <!-- Botón cliente -->
     <div class="btn-client-container">
@@ -109,7 +133,7 @@
 <section class="about-section">
   <div class="about-image">
     <!-- Reemplaza con tu imagen -->
-    <img src="img/sobre-nosotros.jpg" alt="Equipo de trabajo Aquimpool Piscinas, guayaquil, samborondón, ecuador" loading="lazy" />
+    <img src="img/sobre-nosotros.webp" alt="Equipo de trabajo Aquimpool Piscinas, guayaquil, samborondón, ecuador" loading="lazy" />
     <div class="experience-box">
       <strong>Más de 20 años de experiencia</strong>
     </div>
@@ -197,8 +221,8 @@
         <i class="fa-solid fa-water-ladder"></i>
         <span>Mantenimiento de Piscinas</span>
       </div>
-      <p>Eliminamos residuos, balanceamos el pH, desinfectamos y aplicamos productos seguros para una experiencia saludable.</p>
-      <a href="servicios.html#servicio-piscinas">Leer más...</a>
+      <p>Limpieza profunda, balanceamos el pH, desinfectamos y aplicamos productos seguros para una experiencia saludable.</p>
+      <a href="mantenimiento-de-piscinas.html">Leer más...</a>
     </div>
     <div class="service-card">
       <div class="service-top">
@@ -206,7 +230,7 @@
         <span>Construcción de Piscinas</span>
       </div>
       <p>Diseño y construcción de piscinas personalizadas con materiales duraderos y acabados profesionales.</p>
-      <a href="servicios.html#servicio-construccion">Leer más</a>
+      <a href="construccion-de-piscinas.html">Leer más...</a>
     </div>
     <div class="service-card">
       <div class="service-top">
@@ -214,7 +238,7 @@
         <span>Instalación de Equipos</span>
       </div>
       <p>Colocamos bombas, filtros, luces LED, climatizadores, sistemas hidraulicos y más para un funcionamiento óptimo.</p>
-      <a href="#">Leer más</a>
+      <a href="instalacion-de-equipos-de-piscinas.html">Leer más...</a>
     </div>
     <div class="service-card">
       <div class="service-top">
@@ -222,7 +246,7 @@
         <span>Reparación de Piscinas</span>
       </div>
       <p>Solucionamos fugas, filtraciones, grietas y fallas eléctricas con rapidez y garantía.</p>
-      <a href="#">Leer más</a>
+      <a href="reparacion-de-piscinas.html">Leer más...</a>
     </div>
   </div>
 </section>
@@ -232,7 +256,7 @@
   <div class="container">
     <div class="why-us-content">
       <div class="why-us-image">
-        <img src="img/piscina-servicio.jpg" alt="Equipo profesional de Aquimpool trabajando en una piscina" loading="lazy" />
+        <img src="img/piscina-servicio.webp" alt="Equipo profesional de Aquimpool trabajando en una piscina" loading="lazy" />
       </div>
       <div class="why-us-text">
         <h5>¿POR QUÉ ELEGIRNOS?</h5>
@@ -259,10 +283,10 @@
   <h2 class="heading">Conozca a nuestro equipo - Aquimpool</h2>
   <div class="team-container">
     <div class="team-member">
-      <img src="img/Aquimpool piscinas - Ivan Nieves.jpg" alt="Jorge ivan Nieves Azua - Miembro del equipo" loading="lazy">
+      <img src="img/Aquimpool piscinas - Ivan Nieves.webp" alt="Jorge ivan Nieves Azua - Miembro del equipo" loading="lazy">
       <div class="member-info">
         <h3>Jorge Nieves Azua</h3>
-        <p>Contratista - Jefe de obras</p>
+        <p>Contratista</p>
       </div>
       <div class="overlay">
         <div class="social-icons">
@@ -275,9 +299,25 @@
     </div>
 
     <div class="team-member">
-      <img src="img/equipo2.jpg" alt="Miembro del equipo" loading="lazy">
+      <img src="img/equipo2.webp" alt="Miembro del equipo" loading="lazy">
       <div class="member-info">
         <h3>Renato Ramos</h3>
+        <p>Supervisor</p>
+      </div>
+      <div class="overlay">
+        <div class="social-icons">
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-member">
+      <img src="img/Javier-Paredes-aquimpool-piscinas.webp" alt="Miembro del equipo" loading="lazy">
+      <div class="member-info">
+        <h3>Javier Paredes</h3>
         <p>Obrero</p>
       </div>
       <div class="overlay">
@@ -291,26 +331,10 @@
     </div>
 
     <div class="team-member">
-      <img src="img/equipo3.jpg" alt="Miembro del equipo" loading="lazy">
+      <img src="img/Darwin - aquimpool piscinas.webp" alt="Miembro del equipo" loading="lazy">
       <div class="member-info">
-        <h3>Nombre completo</h3>
-        <p>Designación</p>
-      </div>
-      <div class="overlay">
-        <div class="social-icons">
-          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="team-member">
-      <img src="img/equipo4.jpg" alt="Miembro del equipo" loading="lazy">
-      <div class="member-info">
-        <h3>Nombre completo</h3>
-        <p>Designación</p>
+        <h3>Darwin Macias</h3>
+        <p>Obrero</p>
       </div>
       <div class="overlay">
         <div class="social-icons">
@@ -328,10 +352,10 @@
 <section class="brand-section">
   <h2>Marcas asociadas</h2>
   <div class="brand-logos">
-    <img src="img/logos-marcas/logo-hidrotech.png" alt="Hidrotech" loading="lazy">
-    <img src="img/logos-marcas/logo-pentair.png" alt="pentair" loading="lazy">
-    <img src="img/logos-marcas/logo-astralpool.png" alt="astralpool" loading="lazy">
-    <img src="img/logos-marcas/logo-acuamain.png" alt="Acuamain" loading="lazy">
+    <img src="img/logos-marcas/logo-hidrotech.webp" alt="Hidrotech" loading="lazy">
+    <img src="img/logos-marcas/logo-pentair.webp" alt="pentair" loading="lazy">
+    <img src="img/logos-marcas/logo-astralpool.webp" alt="astralpool" loading="lazy">
+    <img src="img/logos-marcas/logo-acuamain.webp" alt="Acuamain" loading="lazy">
   </div>
 </section>
 

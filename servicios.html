@@ -9,107 +9,21 @@
     <meta name="author" content="Aquimpool Piscinas">
     <meta name="robots" content="index, follow">
 
-      <Link rel="icon" href="img/Icono.png" type="image/x-icon"></Link>
+      <!-- favicon -->
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Aquimpool" />
+    <link rel="manifest" href="/img/site.webmanifest" />
+
+
     <link rel="stylesheet" href="css/stylesServicios.css">
     <script src="https://kit.fontawesome.com/7331698cb2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <script src="js/script.js"></script>
     <script src="js/scriptMenu.js"></script>
   
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Servicios de Piscinas",
-  "provider": {
-    "@type": "Organization",
-    "name": "Aquimpool Piscinas",
-    "url": "https://aquimpool.netlify.app/servicios",
-    "logo": "https://aquimpool.netlify.app/img/LOGO%20AQUIMPOOL1.png",
-    "email": "aquimpool.ec@gmail.com",
-    "telephone": "0983032939",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Guayaquil",
-      "addressCountry": "EC"
-    }
-  },
-  "areaServed": [
-    {
-      "@type": "Place",
-      "name": "Guayaquil"
-    },
-    {
-      "@type": "Place",
-      "name": "Samborondón"
-    },
-    {
-      "@type": "Place",
-      "name": "Quito"
-    },
-    {
-      "@type": "Place",
-      "name": "Ecuador"
-    }
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Catálogo de Servicios",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Construcción de Piscinas",
-          "description": "Diseño y construcción de piscinas personalizadas con materiales duraderos y acabados de alta calidad."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Mantenimiento de Piscinas",
-          "description": "Limpieza profunda, control químico, revisión de filtros y bombas para piscinas residenciales y comerciales."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Instalación Hidráulica",
-          "description": "Montaje de sistemas de tuberías y conexión eficiente para piscinas y jacuzzis."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Reparación de Piscinas",
-          "description": "Solución de fallas, filtraciones y problemas eléctricos en piscinas."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Remodelación de Piscinas",
-          "description": "Modernización del diseño, acabados y sistemas de funcionamiento de piscinas."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Instalación de Equipos",
-          "description": "Instalación de bombas, filtros, luces LED y climatizadores con equipos certificados."
-        }
-      }
-    ]
-  }
-}
-</script>
-
-
 </head>
 <body>
     <!-- HTML: Barra superior + Navegación -->
@@ -139,13 +53,23 @@
       <span>AQUIMPOOL</span>
     </div>
 
-    <ul class="nav-menu">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="acercade.html">Nosotros</a></li>
-      <li><a href="servicios.html" class="active">Servicios</a></li>
-      <li><a href="productos.html">Productos</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+  <ul class="nav-menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="acercade.html">Nosotros</a></li>
+    <li class="has-submenu">
+      <a href="servicios.html" class="active">Servicios</a>
+      <ul class="submenu">
+        <li><a href="mantenimiento-de-piscinas.html">Mantenimiento de Piscinas</a></li>
+        <li><a href="construccion-de-piscinas.html">Construcción de Piscinas</a></li>
+        <li><a href="instalacion-hidraulica-de-piscinas-y-o-jacuzzi.html">Instalación Hidráulica</a></li>        
+        <li><a href="remodelacion-de-piscinas.html">Remodelación de Piscinas</a></li>
+        <li><a href="reparacion-de-piscinas.html">Reparación de Piscinas</a></li>
+        <li><a href="instalacion-de-equipos-de-piscinas.html" >Instalación de equipos</a></li>
+      </ul>
+    </li>
+    <li><a href="productos.html">Productos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
 
     <!-- Botón cliente -->
     <div class="btn-client-container">
@@ -164,7 +88,7 @@
 <section id="servicio-construccion" class="service blue-bg">
      </div>
     <div class="service-image">
-    <img src="img/servicios/construccion de piscinas y jacuzzi.jpg" alt="Construcción de piscinas personalizadas en Guayaquil, Samborondón, Quito y a nivel nacional: diseño innovador, materiales de alta calidad y acabados exclusivos">
+    <img src="img/servicios/construccion1.webp" alt="Construcción de piscinas personalizadas en Guayaquil, Samborondón, Quito y a nivel nacional: diseño innovador, materiales de alta calidad y acabados exclusivos">
   </div>
   <div class="service-content ">
     <h2>Construcción de Piscinas</h2>
@@ -174,7 +98,7 @@
       <li><i class="fas fa-hard-hat"></i> Materiales duraderos</li>
       <li><i class="fas fa-user-check"></i> Asesoría profesional</li>
     </ul>
-    <a href="#" class="btn">Ver más...</a>
+    <a href="construccion-de-piscinas.html" class="btn">Ver más...</a>
 </section>
 
 
@@ -188,17 +112,17 @@
       <li><i class="fas fa-vial"></i> Control químico</li>
       <li><i class="fas fa-user-shield"></i> Personal calificado</li>
     </ul>
-    <a href="#" class="btn">Ver más...</a>
+    <a href="mantenimiento-de-piscinas.html" class="btn">Ver más...</a>
   </div>
   <div class="service-image">
-    <img src="img/servicios/Mantenimiento de piscinas.jpg" alt="Servicio profesional de mantenimiento de piscinas en Guayaquil, Samborondón, Quito y a nivel nacional: limpieza profunda, control de pH, desinfección y aplicación de productos químicos de calidad" loading="lazy">
+    <img src="img/servicios/mantenimiento1.webp" alt="Servicio profesional de mantenimiento de piscinas en Guayaquil, Samborondón, Quito y a nivel nacional: limpieza profunda, control de pH, desinfección y aplicación de productos químicos de calidad" loading="lazy">
   </div>
 </section>
 
 <!-- Servicio 3 -->
-<section class="service blue-bg">
+<section class="service blue-bg" id="instalacion-hidraulica">
   <div class="service-image">
-    <img src="img/servicios/instalacion de piscinas guayaquil 1.jpg" alt="Instalación hidráulica de piscinas y jacuzzis en Guayaquil, Samborondón, Quito y a nivel nacional: sistemas avanzados de tuberías y conexión para eficiencia y durabilidad" loading="lazy">
+    <img src="img/servicios/instalacion-de-piscinas-guayaquil.webp" alt="Instalación hidráulica de piscinas y jacuzzis en Guayaquil, Samborondón, Quito y a nivel nacional: sistemas avanzados de tuberías y conexión para eficiencia y durabilidad" loading="lazy">
   </div>
   <div class="service-content">
     <h2>Instalación Hidráulica</h2>
@@ -208,12 +132,12 @@
       <li><i class="fas fa-wrench"></i> Técnicas modernas</li>
       <li><i class="fas fa-shield-alt"></i> Garantía de funcionamiento</li>
     </ul>
-    <a href="#" class="btn">Ver más</a>
+    <a href="instalacion-hidraulica-de-piscinas-y-o-jacuzzi.html" class="btn">Ver más</a>
   </div>
 </section>
 
 <!-- Servicio 4 -->
-<section class="service gray-bg">
+<section class="service gray-bg" id="reparacion-piscinas">
   <div class="service-content">
     <h2>Reparación de Piscinas</h2>
     <p>Reparamos cualquier falla o desgaste en su piscina, desde fugas hasta sistemas de bombeo. Nuestro servicio rápido y confiable extiende la vida útil de su piscina y garantiza su funcionalidad.</p>
@@ -222,17 +146,17 @@
       <li><i class="fas fa-hammer"></i> Soluciones efectivas</li>
       <li><i class="fas fa-check-circle"></i> Reparaciones garantizadas</li>
     </ul>
-    <a href="#" class="btn">Ver más</a>
+    <a href="reparacion-de-piscinas.html" class="btn">Ver más</a>
   </div>
   <div class="service-image">
-    <img src="img/servicios/reparacion y remodelacion de piscinas guayaquil 1.jpg" alt="Reparación profesional de piscinas en Guayaquil, Samborondón, Quito y a nivel nacional: solución de fugas, grietas, problemas eléctricos y mantenimiento estructural" loading="lazy">
+    <img src="img/servicios/reparacion-de-piscina-aquimpool.webp" alt="Reparación profesional de piscinas en Guayaquil, Samborondón, Quito y a nivel nacional: solución de fugas, grietas, problemas eléctricos y mantenimiento estructural" loading="lazy">
   </div>
 </section>
 
 <!-- Servicio 5 -->
 <section class="service blue-bg">
   <div class="service-image">
-    <img src="img/servicios/Remodelacion de piscinas.jpg" alt="Remodelación de piscinas y jacuzzis en Guayaquil, Samborondón, Quito y a nivel nacional: renovación de diseño, modernización de equipos y mejora de funcionalidad" loading="lazy">
+    <img src="img/servicios/Remodelacion-de-piscinas.webp" alt="Remodelación de piscinas y jacuzzis en Guayaquil, Samborondón, Quito y a nivel nacional: renovación de diseño, modernización de equipos y mejora de funcionalidad" loading="lazy">
   </div>
   <div class="service-content">
     <h2>Remodelación de Piscinas</h2>
@@ -242,7 +166,7 @@
       <li><i class="fas fa-fill-drip"></i> Acabados de calidad</li>
       <li><i class="fas fa-cogs"></i> Optimización de sistemas</li>
     </ul>
-    <a href="#" class="btn">Ver más</a>
+    <a href="remodelacion-de-piscinas.html" class="btn">Ver más</a>
   </div>
 </section>
 
@@ -256,10 +180,10 @@
       <li><i class="fas fa-bolt"></i> Instalación segura</li>
       <li><i class="fas fa-star"></i> Máximo rendimiento</li>
     </ul>
-    <a href="#" class="btn">Ver más</a>
+    <a href="instalacion-de-equipos-de-piscinas.html" class="btn">Ver más</a>
   </div>
   <div class="service-image">
-    <img src="img/servicios/instalacion de equipos de piscinas.jpg" alt="Instalación de equipos modernos para piscinas en Guayaquil, Samborondón, Quito y a nivel nacional: bombas, filtros, luces LED, climatizadores y sistemas hidráulicos avanzados" loading="lazy">
+    <img src="img/servicios/instalacion-de-equipos.webp" alt="Instalación de equipos modernos para piscinas en Guayaquil, Samborondón, Quito y a nivel nacional: bombas, filtros, luces LED, climatizadores y sistemas hidráulicos avanzados" loading="lazy">
   </div>
 </section>
 
