@@ -224,12 +224,13 @@
 
   .btn-client-container {
     order: 2;
-    margin: 0 10px;
+    margin: 0 0px;
   }
 
   .btn-client {
-    padding: 6px 12px;
+    padding: 6px 10px;
     font-size: 12px;
+    border-radius: 4px;
   }
 
   .menu-toggle {
@@ -260,28 +261,72 @@
 
   .nav-menu li a {
     display: block;
-    padding: 14px 20px;
+    padding: 11.5px 20px;
     border-top: 1px solid #eee;
-    font-weight: 600;
+    font-weight: 550px;
   }
 
   /* Submenús */
   .has-submenu .submenu {
     display: none;
     position: static;
-    background-color: #f6f6f6;
+    background-color: #efefef;
     box-shadow: none;
     width: 100%;
+    font-weight: 500px;
   }
 
   .has-submenu.active .submenu {
-    display: block;
+    display: flex;
   }
 
   .submenu li a {
     padding-left: 30px;
   }
 
+  .nav-menu li a:hover,
+  .nav-menu li a.active {
+      background-color: #0e5292;
+  }
+
+
+}
+
+/* Estilo general del submenú */
+.nav-menu .submenu {
+  display: none;
+  flex-direction: column;
+  padding-left: 20px;
+  background-color: #f8f8f8;
+}
+
+/* Mostrar el submenú cuando está activo */
+.nav-menu .has-submenu.active .submenu {
+  display: flex;
+}
+
+/* Evita posicionamiento absoluto en móvil */
+@media screen and (max-width: 991px) {
+  .nav-menu .submenu {
+    position: static;
+    width: 100%;
+  }
+
+  .nav-menu .has-submenu {
+    position: relative;
+  }
+
+  .nav-menu .has-submenu > a::after {
+    content: "+";
+    float: right;
+    margin-left: 8px;
+    font-size: 1.05em;
+    color: #343434;
+  }
+
+  .nav-menu .submenu a {
+    padding: 10px;
+  }
 }
 
 
