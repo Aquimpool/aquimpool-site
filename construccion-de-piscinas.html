@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construcción de piscinas | AQUIMPOOL</title>
+    <title>Construcción de piscinas y jacuzzis - AQUIMPOOL PISCINAS</title>
 
     <!-- Descripción meta -->
     <meta name="description" content="Especialistas en construcción de piscinas, jacuzzis y saunas en Ecuador. Diseños personalizados, materiales de calidad y más de 20 años de experiencia.">
@@ -12,9 +12,9 @@
     <link rel="canonical" href="https://aquimpool.com.ec/construccion-de-piscinas.html">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Construcción de Piscinas en Ecuador | Aquimpool">
+    <meta property="og:title" content="Construcción de Piscinas en Ecuador - Aquimpool Piscinas">
     <meta property="og:description" content="Construimos piscinas, jacuzzis y saunas con calidad y diseño personalizado. Servicios en Guayaquil, Samborondón y todo Ecuador.">
-    <meta property="og:image" content="https://aquimpool.com.ec/img/logo-aquimpool.png">
+    <meta property="og:image" content="https://aquimpool.com.ec/img/open.png">
     <meta property="og:url" content="https://aquimpool.com.ec/construccion-de-piscinas.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Aquimpool">
@@ -32,6 +32,7 @@
     <script src="https://kit.fontawesome.com/7331698cb2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <script src="js/script.js"></script>
+    <script src="js/faq.js"></script>
 
 <script type="application/ld+json">
 {
@@ -87,7 +88,7 @@
     <li><a href="index.html">Inicio</a></li>
     <li><a href="acercade.html">Nosotros</a></li>
     <li class="has-submenu">
-      <a href="servicios.html" class="active">Servicios</a>
+      <a  class="active">Servicios</a>
       <ul class="submenu">
         <li><a href="mantenimiento-de-piscinas.html">Mantenimiento de Piscinas</a></li>
         <li><a href="construccion-de-piscinas.html" class="active">Construcción de Piscinas</a></li>
@@ -95,6 +96,7 @@
         <li><a href="remodelacion-de-piscinas.html">Remodelación de Piscinas</a></li>
         <li><a href="reparacion-de-piscinas.html">Reparación de Piscinas</a></li>
         <li><a href="instalacion-de-equipos-de-piscinas.html" >Instalación de equipos</a></li>
+        <li><a href="servicios.html" >Todos los servicios</a></li>
       </ul>
     </li>
     <li><a href="productos.html">Productos</a></li>
@@ -113,20 +115,59 @@
 </nav>
 
  <!-- Seccion Construcción de piscinas -->
-<section class="servicio-construccion">
+ <!-- Contenido principal del servicio -->
+<section class="contenido-servicio">
   <div class="container">
     <div class="contenido">
-      <div class="texto">
+      <div class="imagen">
+        <img src="img/servicios/construccion-de-piscinas.webp" alt="Servicio de mantenimiento de piscina profesional en Guayaquil" loading="lazy">
+      </div>
+
+    <div class="texto">
         <h1 style="margin-bottom: 10px">Construcción de piscinas</h1>
         <p>En AQUIMPOOL, somos especialistas en construcción de piscinas, saunas y jacuzzis en Ecuador, ofreciendo diseños personalizados, estructuración profesional y acabados duraderos.</p>
         <p>Construimos piscinas residenciales y comerciales en Guayaquil, Samborondón y todo el país, utilizando materiales de alta calidad y tecnología avanzada para garantizar resultados seguros, funcionales y estéticos.</p>
         <p>Confía en nuestra experiencia de más de 20 años en proyectos de piscinas que superan expectativas.</p>
-    </div>
-      <div class="imagen">
-        <!-- Imagen lateral del servicio -->
-        <img src="img/servicios/construccion-de-piscinas.webp" alt="Servicio de construcción de piscina y jacuzzi en Guayaquil" loading="lazy">
+      <div class="comunicate">
+        <h3>Comunícate con nosotros</h3>
+        <div class="botones-contacto">
+        <a href="tel:0983032939" class="btn-contacto llamada"><i class="fas fa-phone"></i> Llamar</a>
+        <a href="https://api.whatsapp.com/message/SKN67A7IL7Q6D1?autoload=1&app_absent=0" class="btn-contacto whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
       </div>
     </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Sección Galeria de fotos -->
+<section class="galeria">
+  <h4>CONSTRUCCIÓN DE PISCINAS EN TODO ECUADOR</h4>
+  <div class="galeria-grid">
+    <img src="img/servicios/trabajos-realizados/construccion-de-velo-de-agua.webp" alt="cascadas artificiales guayaquil y samborondon" onclick="abrirModal(this)">
+    <img src="img/servicios/trabajos-realizados/construccion-de-piscina1.webp" alt="construcción de piscinas guayaquil" onclick="abrirModal(this)">
+    <img src="img/servicios/trabajos-realizados/construccion-de-piscina2.webp" alt="construcción de piscinas samborondon" onclick="abrirModal(this)">
+    <img src="img/servicios/trabajos-realizados/construccion-de-piscina3.webp" alt="cosntrucción de jacuzzis guayaquil" onclick="abrirModal(this)">
+    <img src="img/servicios/trabajos-realizados/construccion-de-piscina4.webp" alt="construcción de jacuzzis samborondon" onclick="abrirModal(this)">
+    <img src="img/servicios/trabajos-realizados/construccion-de-piscina5.webp" alt="Construcción de piscinas ecuador" onclick="abrirModal(this)">
+    <img src="img/servicios/mantenimiento1.webp" alt="Proyecto 7" class="solo-escritorio" onclick="abrirModal(this)">
+    <img src="img/servicios/remodelacion-de-piscinas-jacuzzi.webp" alt="construccion de piscinas modernas en guayaquil y samborondón" class="solo-escritorio" onclick="abrirModal(this)">
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" onclick="cerrarModal()">
+    <span class="cerrar" onclick="cerrarModal(event)">✖</span>
+    <div class="modal-contenedor" onclick="event.stopPropagation()">
+      <img class="modal-imagen" id="imagenGrande">
+    </div>
+  </div>
+</section>
+
+
+
+<section class="servicio-construccion">
+  <div class="container">
 
     <div class="porque-elegirnos">
       <h2>¿Por qué elegirnos?</h2>
@@ -155,16 +196,49 @@
     </div>
 
     <div class="contacto-servicio">
-      <h3>¡Solicita tu mantenimiento ahora!</h3>
+      <h3>¡Solicita tu presupuesto ahora!</h3>
       <p>Contáctanos para una inspección gratuita o cotización personalizada. Estamos listos para ayudarte.</p>
       <div class="info">
-        <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> <a href="tel:+593987654321">0983032939</a></p>
+        <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> <a href="tel:0983032939">0983032939 - 0989111478</a></p>
         <p><i class="fas fa-envelope"></i> <strong>Email:</strong> aquimpool.ec@gmail.com</p>
         <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Guayaquil, Ecuador</p>
       </div>
       <a href="tel:+593983032939" class="btn-llamar"><i class="fas fa-phone"></i> Llamar Ahora</a>
     </div>
   </div>
+</section>
+
+<!-- SECCIÓN FAQ -->
+ <section class="faq">
+  <h2>Preguntas Frecuentes sobre Construcción de Piscinas</h2>
+
+  <div class="faq-item">
+    <div class="faq-question">¿Cuánto tiempo toma construir una piscina?</div>
+    <div class="faq-answer">El tiempo de construcción puede variar según el tipo y tamaño de la piscina, pero en promedio toma entre 4 a 8 semanas desde la excavación hasta la entrega final.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">¿Incluye el servicio el diseño de la piscina?</div>
+    <div class="faq-answer">Sí. Ofrecemos asesoría en diseño arquitectónico y funcional de la piscina, adaptándonos al espacio disponible y a tus preferencias.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">¿Qué garantía ofrecen por la construcción?</div>
+    <div class="faq-answer">Ofrecemos garantía estructural por varios años, además de garantía en los equipos instalados como bombas, filtros y sistemas hidráulicos.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">¿Puedo agregar accesorios como luces o cascadas?</div>
+    <div class="faq-answer">¡Claro! Podemos integrar luces LED, cascadas, sistemas de climatización, y más, desde el diseño inicial.</div>
+  </div>
+
+  <div class="faq-item">
+  <div class="faq-question">¿Qué empresas construyen piscinas en Ecuador?</div>
+  <div class="faq-answer">
+    AQUIMPOOL es una de las principales empresas que construyen piscinas en Ecuador. Contamos con más de 20 años de experiencia en diseño y construcción de piscinas residenciales, comerciales y recreativas. Nuestro equipo especializado garantiza calidad, durabilidad y cumplimiento de normas técnicas en cada proyecto.
+  </div>
+</div>
+
 </section>
 
 
@@ -220,7 +294,7 @@
 
   <!-- Flotante de whatsapp -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<a href="https://w.app/aquimpoolpiscinas" class="float" target="_blank">
+<a href="https://api.whatsapp.com/message/SKN67A7IL7Q6D1?autoload=1&app_absent=0" class="float" target="_blank">
 <i class="fa fa-whatsapp my-float"></i>
 </a>
 

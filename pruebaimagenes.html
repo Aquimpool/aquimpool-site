@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/pruebaimagenes.css">
+</head>
+<body>
+
+  <style>
+.galeria {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.galeria h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0e5292;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeria-grid img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenedor {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-imagen {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+  object-fit: contain;
+  box-shadow: 0 0 20px #000;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* Oculta las imágenes extras en móviles */
+@media (max-width: 768px) {
+  .galeria-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .galeria {
+  padding: 40px 4px;
+  }
+
+  .galeria-grid {
+  gap: 8px;
+  }
+
+  .galeria-grid img {
+  border-radius: 2px;
+  }
+
+  .solo-escritorio {
+    display: none;
+  }
+}
+
+  </style>
+
+<section class="galeria">
+  <h2>Galería de Proyectos</h2>
+  <div class="galeria-grid">
+<img src="img/servicios/instalacion-de-equipos-piscinas.webp" alt="Proyecto 1" onclick="abrirModal(this)">
+    <img src="img/servicios/remodelacion-de-piscinas-jacuzzi.webp" alt="Proyecto 2" onclick="abrirModal(this)">
+    <img src="img/servicios/reparacion-de-piscinas.webp" alt="Proyecto 3" onclick="abrirModal(this)">
+    <img src="img/servicios/reparacion-de-piscinas.webp" alt="Proyecto 4" onclick="abrirModal(this)">
+    <img src="img/servicios/instalacion-de-equipos-piscinas.webp" alt="Proyecto 5" onclick="abrirModal(this)">
+    <img src="img/servicios/remodelacion-de-piscinas-jacuzzi.webp" alt="Proyecto 6" onclick="abrirModal(this)">
+    <img src="img/servicios/reparacion-de-piscinas.webp" alt="Proyecto 7" class="solo-escritorio" onclick="abrirModal(this)">
+    <img src="img/servicios/instalacion-de-equipos-piscinas.webp" alt="Proyecto 8" class="solo-escritorio" onclick="abrirModal(this)">
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" onclick="cerrarModal()">
+    <span class="cerrar" onclick="cerrarModal(event)">✖</span>
+    <div class="modal-contenedor" onclick="event.stopPropagation()">
+      <img class="modal-imagen" id="imagenGrande">
+    </div>
+  </div>
+</section>
+
+<script>
+function abrirModal(img) {
+  const modal = document.getElementById("modal");
+  const imagenGrande = document.getElementById("imagenGrande");
+  imagenGrande.src = img.src;
+  modal.style.display = "flex";
+}
+
+function cerrarModal(event) {
+  event.stopPropagation();
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+    
+</body>
+</html>

@@ -40,4 +40,41 @@ window.addEventListener('scroll', function () {
       navMenu.classList.toggle('active');
     });
 
+//JavaScript de la Galeria
+  function abrirModal(img) {
+  const modal = document.getElementById("modal");
+  const imagenGrande = document.getElementById("imagenGrande");
+  imagenGrande.src = img.src;
+  modal.style.display = "flex";
+}
+
+function cerrarModal(event) {
+  event.stopPropagation();
+  document.getElementById("modal").style.display = "none";
+}
+
+//PREGUNTAS FRECUENTES
+
+document.addEventListener("DOMContentLoaded", () => {
+  const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(q => {
+    q.addEventListener('click', () => {
+      const isActive = q.classList.contains('active');
+      
+      // Cierra todos
+      questions.forEach(btn => {
+        btn.classList.remove('active');
+        btn.nextElementSibling.style.display = 'none';
+      });
+
+      // Abre el actual si no estaba activo
+      if (!isActive) {
+        q.classList.add('active');
+        q.nextElementSibling.style.display = 'block';
+      }
+    });
+  });
+});
+
 

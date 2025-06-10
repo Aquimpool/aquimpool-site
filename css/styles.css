@@ -183,79 +183,109 @@
     display: block;
   }
 
+  /*MENU DISPOSITIVOS*/
   @media (max-width: 768px) {
-    .has-submenu .submenu {
-      position: static;
-      box-shadow: none;
-      background-color: white;
-    }
-
-    .submenu li a {
-      padding-left: 30px;
-    }
+     body {
+    padding-top: 70px; /* Solo compensamos la altura del nav */
+  }
+  /* Oculta la barra superior */
+  .top-header {
+    display: none;
   }
 
-
-    /* ------------------ RESPONSIVE ------------------ */
-    @media (max-width: 768px) {
-          body {
-    padding-top: 80px;
-  }
-
+  /* NAV general */
   .main-nav {
-    top: 0; /* ← Corregido aquí */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    top: 0;
+    height: auto;
   }
-      
-        .top-header {
-        display: none;
-      }
 
-      .btn-client-container {
-        display: none;
-      }
+  /* Orden horizontal superior */
+  .main-nav > .logo,
+  .main-nav > .btn-client-container,
+  .main-nav > .menu-toggle {
+    display: flex;
+    align-items: center;
+  }
 
-      .menu-toggle {
-        display: block;
-      }
+  .logo i{
+    font-size: 1px;
+  }
+  
+  .logo {
+    order: 1;
+    font-size: 17px;
+    margin-right: auto;
+  }
 
-      .nav-menu {
-    display: none; /* Oculta el menú inicialmente */
-    flex-direction: column;
+  .btn-client-container {
+    order: 2;
+    margin: 0 10px;
+  }
+
+  .btn-client {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .menu-toggle {
+    order: 3;
+    font-size: 28px;
+    color: #0e5292;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  /* Menú desplegable */
+  .nav-menu {
+    order: 4;
     width: 100%;
-    background-color: white; /* Fondo blanco para evitar transparencia */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    padding: 0;
-    transition: all 0.3s ease;
-    position: fixed; /* Asegura que cubra toda la pantalla */
-    top: 80px; /* Ajusta para coincidir con la altura del header */
-    left: 0;
-    height: calc(60vh - 80px); /* Calcula el espacio restante debajo del header */
-    z-index: 998;
-    overflow-y: auto; /* Permite scroll si el menú es más largo que la pantalla */
-      }
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: white;
+  }
 
-      .nav-menu.active {
-        display: flex;
-      }
+  .nav-menu.active {
+    display: flex;
+  }
 
-      .nav-menu li {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #eee;
-      }
+  .nav-menu li {
+    width: 100%;
+  }
 
-      .nav-menu li a {
-        padding: 15px 0;
-      }
+  .nav-menu li a {
+    display: block;
+    padding: 14px 20px;
+    border-top: 1px solid #eee;
+    font-weight: 600;
+  }
 
-      .main-nav {
-        padding: 0 10px;
-      }
+  /* Submenús */
+  .has-submenu .submenu {
+    display: none;
+    position: static;
+    background-color: #f6f6f6;
+    box-shadow: none;
+    width: 100%;
+  }
 
-      .logo span {
-        font-size: 18px;
-      }
-    }
+  .has-submenu.active .submenu {
+    display: block;
+  }
+
+  .submenu li a {
+    padding-left: 30px;
+  }
+
+}
+
+
+
 
 
 /* OPCIONAL: AÑADE ESPACIADO ENTRE SECCIONES MÁS ABAJO */
@@ -444,6 +474,104 @@
   }
 }
 
+/*seccion Galeria de imagenes*/
+.galeria {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.galeria h4 {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  color: #0c4982;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeria-grid img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.07);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenedor {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-imagen {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+  object-fit: contain;
+  box-shadow: 0 0 20px #000;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* Oculta las imágenes extras en móviles */
+@media (max-width: 768px) {
+  .galeria-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .galeria {
+  padding: 40px 10px;
+  }
+
+  .galeria-grid {
+  gap: 8px;
+  }
+
+  .galeria-grid img {
+  border-radius: 2px;
+  }
+
+  .solo-escritorio {
+    display: none;
+  }
+}
+
 
 
 /*Seccion Fomulario*/
@@ -565,6 +693,19 @@
   background-color: #000000;
 }
 
+@media (max-width: 768px){
+  .quote-info h4, h2, p{
+    text-align: center;
+  }
+
+  .quote-stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+}
+
 /* Responsivo */
 @media screen and (max-width: 900px) {
   .quote-container {
@@ -580,6 +721,10 @@
     max-width: 100%;
     width: 100%;
   }
+
+  .quote-info h2 {
+  font-size: 1.9rem;
+  }
 }
 
 
@@ -587,7 +732,7 @@
 .services-section {
   text-align: center;
   padding: 80px 10%;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .section-header h4 {
@@ -599,7 +744,7 @@
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   font-weight: 700;
   color: #1c1d25;
   margin-bottom: 50px;
@@ -666,8 +811,8 @@
 
 /* Sección por qué elegirnos */
 .why-us-section {
-  background-color: #efefef;
-  padding: 0px 20px;
+  background-color: #ffffff;
+  padding: 40px 20px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -787,11 +932,87 @@
 }
 
 
+/*seccion COMO TRABAJAMOs*/
+.como-trabajamos {
+  background-color: #efefef;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.como-trabajamos h2 {
+  font-size: 1.8rem;
+  color: #0c4070;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 25px;
+  width: 280px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: #0e5292;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #0e5292;
+}
+
+.card:hover h3,
+.card:hover i,
+.card:hover p {
+  color: #ffffff;
+}
+
+
+
 /*Seccion Equipo detrabajo*/
 .team-section {
   text-align: center;
   padding: 70px 20px;
   background-color: #fff;
+}
+
+.team-section h2{
+  font-size: 1.9rem;
+}
+
+.team-section h4{
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px){
+.team-section h4{
+  font-size: 1.4rem;
+}
+
 }
 
 .subheading {

@@ -263,7 +263,7 @@
 
 .servicio-mantenimiento  {
   padding: 60px 20px;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 
 .servicio-mantenimiento .container {
@@ -273,7 +273,7 @@
 
 .servicio-construccion {
   padding: 60px 20px;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 
 .servicio-construccion .container {
@@ -283,7 +283,7 @@
 
 .servicio-remodelacion {
   padding: 60px 20px;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 
 .servicio-remodelacion .container {
@@ -293,7 +293,7 @@
 
 .servicio-instalacion-hidraulica {
   padding: 60px 20px;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 
 .servicio-instalacion-hidraulica .container {
@@ -356,7 +356,7 @@
 }
 
 .porque-elegirnos h2{
-     margin-top: 60px 
+     margin-top: 0px 
 }
 
 .porque-elegirnos .iconos {
@@ -406,12 +406,161 @@
 .btn-llamar:hover {
   background-color: #07325c;
 }
+.contenido-servicio {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+}
+
+.contenido-servicio .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 
 @media (max-width: 768px) {
   .contenido {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .texto h1{
+    font-size: 1.8rem;
+}
+
+
+}
+
+.comunicate {
+  margin-top: 30px;
+}
+
+.comunicate h3 {
+  font-size: 1.1rem;
+  color: #212121;
+  margin-bottom: 15px;
+}
+
+.botones-contacto {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-contacto {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-contacto i {
+  font-size: 15px;
+}
+
+.btn-contacto.llamada {
+  background-color: #0e5292;
+}
+
+.btn-contacto.llamada:hover {
+  background-color: #07325c;
+  transform: scale(1.05);
+}
+
+.btn-contacto.whatsapp {
+  background-color: #25D366;
+}
+
+.btn-contacto.whatsapp:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .botones-contacto {
+    flex-direction: column;
+    gap: 15px;
+    font-weight: normal;
+    align-items: center;
   }
 }
+
+/*PREGUNTAS FRECUENTES*/
+.faq {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.faq h2 {
+  font-size: 1.5rem;
+  color: #333;
+  border-bottom: 2px solid #999;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::after {
+  content: "›";
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+  color: #777;
+}
+
+.faq-question.active::after {
+  transform: rotate(90deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 1rem 1rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+@media screen and (max-width: 600px) {
+  .faq {
+    padding: 1rem;
+  }
+
+  .faq h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+
 
 
 /* pie de pagina */
@@ -607,3 +756,103 @@
     right:10px;
   }
 }
+
+
+/*seccion Galeria de imagenes*/
+.galeria {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.galeria h4 {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  color: #0c4982;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeria-grid img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.07);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenedor {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-imagen {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+  object-fit: contain;
+  box-shadow: 0 0 20px #000;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* Oculta las imágenes extras en móviles */
+@media (max-width: 768px) {
+  .galeria-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .galeria {
+  padding: 40px 10px;
+  }
+
+  .galeria-grid {
+  gap: 8px;
+  }
+
+  .galeria-grid img {
+  border-radius: 2px;
+  }
+
+  .solo-escritorio {
+    display: none;
+  }
+}
+
