@@ -1,210 +1,204 @@
-    /* RESET GENERAL */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #ffffff;
-      color: #1c1d25;
-      padding-top: 120px; /* Ajusta según altura de tu nav */
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #1c1d25;
+  padding-top: 120px;
+}
 
-    /* ------------------ TOP HEADER ------------------ */
-    .top-header {
-      background-color: #252525;
-      color: white;
-      font-size: 13px;
-      padding: 10px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      transition: transform 0.3s ease;
-    }
+/* ------------------ TOP HEADER ------------------ */
+.top-header {
+  background-color: #252525;
+  color: white;
+  font-size: 13px;
+  padding: 10px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
 
-    .hide-top-header {
-      transform: translateY(-100%);
-    }
+.hide-top-header {
+  transform: translateY(-100%);
+}
 
-    .top-header .left span {
-      margin-right: 20px;
-    }
+.top-header .left span {
+  margin-right: 20px;
+}
 
-    .top-header .right a {
-      color: white;
-      margin-left: 15px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+.top-header .right a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-    .top-header .right a:hover {
-      color: #0e5292;
-    }
+.top-header .right a:hover {
+  color: #0e5292;
+}
 
-    /* ------------------ MAIN NAV ------------------ */
-    
-    
-    .main-nav {
-      background-color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 60px;
-      height: 83px;
-      width: 100%;
-      position: fixed;
-      top: 37px;
-      left: 0;
-      z-index: 999;
-      transition: box-shadow 0.3s ease, top 0.3s ease;
-    }
+/* ------------------ MAIN NAV ------------------ */
+.main-nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  height: 83px;
+  width: 100%;
+  position: fixed;
+  top: 37px;
+  left: 0;
+  z-index: 999;
+  transition: box-shadow 0.3s ease, top 0.3s ease;
+}
 
-    .main-nav.shadow {
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    }
+.main-nav.shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      font-size: 24px;
-      color: #0e5292;
-    }
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #0e5292;
+}
 
-    .logo i {
-      margin-right: 10px;
-      font-size: 26px;
-    }
+.logo i {
+  margin-right: 10px;
+  font-size: 26px;
+}
 
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
+.nav-menu {
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
 
-    .nav-menu li {
-      height: 100%;
-    }
+.nav-menu li {
+  height: 100%;
+}
 
-    .nav-menu li a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      padding: 0 16px;
-      text-decoration: none;
-      color: #1c1c1c;
-      font-weight: 600;
-      font-size: 16px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+.nav-menu li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 16px;
+  text-decoration: none;
+  color: #1c1c1c;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-    .nav-menu li a:hover,
-    .nav-menu li a.active {
-      background-color: #0e5292;
-      color: white;
-      border: none;
-      border-radius: 0;
-    }
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  background-color: #0e5292;
+  color: white;
+}
 
-    .submenu li a.active{
-      background-color: #e5e5e5;
-      color: #2f2f2f;
-      font-weight: 510;
-    }
+.submenu li a.active {
+  background-color: #e5e5e5;
+  color: #2f2f2f;
+  font-weight: 500;
+}
 
-    .btn-client-container {
-      margin-left: 20px;
-    }
+.btn-client-container {
+  margin-left: 20px;
+}
 
-    .btn-client {
-      background-color: #0e5292;
-      color: white;
-      padding: 10px 25px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
+.btn-client {
+  background-color: #0e5292;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
-    .btn-client:hover {
-      background-color: #032b4f;
-    }
+.btn-client:hover {
+  background-color: #032b4f;
+}
 
-    .menu-toggle {
-      display: none;
-      font-size: 40px;
-      cursor: pointer;
-      color: #0e5292;
-      margin-left: 20px;
-    }
+.menu-toggle {
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #0e5292;
+  margin-left: 20px;
+}
 
-  .has-submenu {
-    position: relative;
+/* ------------------ SUBMENÚ ------------------ */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f6f6f6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 240px;
+  z-index: 999;
+  list-style: none;
+}
+
+.submenu li {
+  border-bottom: 1px solid #eee;
+}
+
+.submenu li a {
+  padding: 10px 16px;
+  display: block;
+  color: #1c1d3e;
+  font-weight: 500;
+  text-align: left;
+}
+
+.submenu li a:hover {
+  background-color: #0e5292;
+  color: white;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+/* ------------------ RESPONSIVE SOLO MÓVIL ------------------ */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
   }
 
-  .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgb(246, 246, 246);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 240px;
-    z-index: 999;
-    list-style: none;  /* ← Esto elimina los puntos */
-  }
+.has-submenu:hover .submenu {
+  display: block;
+}
 
-  .submenu li {
-    border-bottom: 1px solid #eee;
-  }
-
-  .submenu li a {
-    padding: 10px 16px;
-    display: block;
-    color: #1c1d3e;
-    font-weight: 500;
-    text-align: left;
-  }
-
-  .submenu li a:hover {
-    background-color: #0e5292;
-    color: white;
-  }
-
-  .has-submenu:hover .submenu {
-    display: block;
-  }
-
-  /*MENU DISPOSITIVOS*/
-  @media (max-width: 768px) {
-     body {
-    padding-top: 70px; /* Solo compensamos la altura del nav */
-  }
-  /* Oculta la barra superior */
   .top-header {
     display: none;
   }
 
-  /* NAV general */
   .main-nav {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px 15px;
     top: 0;
     height: auto;
   }
 
-  /* Orden horizontal superior */
   .main-nav > .logo,
   .main-nav > .btn-client-container,
   .main-nav > .menu-toggle {
@@ -212,19 +206,24 @@
     align-items: center;
   }
 
-  .logo i{
-    font-size: 1px;
-  }
-  
   .logo {
     order: 1;
     font-size: 17px;
     margin-right: auto;
   }
 
+  .logo i {
+    font-size: 1px; /* Oculta ícono si no lo usas */
+  }
+
+  .logo img {
+    width: 62px;
+    height: auto;
+  }
+
   .btn-client-container {
     order: 2;
-    margin: 0 0px;
+    margin: 0;
   }
 
   .btn-client {
@@ -236,12 +235,9 @@
   .menu-toggle {
     order: 3;
     font-size: 28px;
-    color: #0e5292;
     margin-left: auto;
-    cursor: pointer;
   }
 
-  /* Menú desplegable */
   .nav-menu {
     order: 4;
     width: 100%;
@@ -261,55 +257,9 @@
 
   .nav-menu li a {
     display: block;
-    padding: 11.5px 20px;
+    padding: 12px 20px;
     border-top: 1px solid #eee;
-    font-weight: 550px;
-  }
-
-  /* Submenús */
-  .has-submenu .submenu {
-    display: none;
-    position: static;
-    background-color: #efefef;
-    box-shadow: none;
-    width: 100%;
-    font-weight: 500px;
-  }
-
-  .has-submenu.active .submenu {
-    display: flex;
-  }
-
-  .submenu li a {
-    padding-left: 30px;
-  }
-
-  .nav-menu li a:hover,
-  .nav-menu li a.active {
-      background-color: #0e5292;
-  }
-
-
-}
-
-/* Estilo general del submenú */
-.nav-menu .submenu {
-  display: none;
-  flex-direction: column;
-  padding-left: 20px;
-  background-color: #f8f8f8;
-}
-
-/* Mostrar el submenú cuando está activo */
-.nav-menu .has-submenu.active .submenu {
-  display: flex;
-}
-
-/* Evita posicionamiento absoluto en móvil */
-@media screen and (max-width: 991px) {
-  .nav-menu .submenu {
-    position: static;
-    width: 100%;
+    font-weight: 600;
   }
 
   .nav-menu .has-submenu {
@@ -324,11 +274,25 @@
     color: #343434;
   }
 
-  .nav-menu .submenu a {
-    padding: 10px;
+  .nav-menu .submenu {
+    display: none;
+    position: static;
+    width: 100%;
+    flex-direction: column;
+    padding-left: 20px;
+    background-color: #f8f8f8;
+    box-shadow: none;
+  }
+
+  .nav-menu .has-submenu.active .submenu {
+    display: flex;
+  }
+
+  .submenu li a {
+    padding: 10px 20px;
+    font-weight: 500;
   }
 }
-
 
 
 

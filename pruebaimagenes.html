@@ -1,149 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/pruebaimagenes.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
   <style>
-.galeria {
-  padding: 40px 20px;
-  background-color: #f4f4f4;
-  text-align: center;
+
+  /* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.galeria h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #0e5292;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #1c1d25;
 }
 
-.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.galeria-grid img {
-  width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.galeria-grid img:hover {
-  transform: scale(1.03);
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-contenedor {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
+.top-header {
+  background-color: #222;
+  color: #fff;
+  padding: 10px 60px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  font-size: 13px;
 }
 
-.modal-imagen {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 4px;
-  object-fit: contain;
-  box-shadow: 0 0 20px #000;
+.contact-info span {
+  margin-right: 20px;
 }
 
-.cerrar {
+.contact-info i {
+  margin-right: 6px;
+}
+
+.social-icons a {
+  margin-left: 14px;
+  color: #fff;
+  font-size: 16px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1da1f2; /* cambia a azul claro */
+  transform: scale(1.2);
+}
+
+
+/* ------- AREA DE MENU --------*/
+
+/* NAVBAR GENERAL */
+.navbar {
+  background-color: rgb(231, 231, 231);
+  position: relative;
+  padding: 10px 60px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  color: #0e5292;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-desktop {
+  display: inline;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+/* NAV MENU */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu li a {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* HOVER Y ACTIVE EN ESCRITORIO */
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  background-color: #093f72;
+  color: white;
+}
+
+/* SUBMENU */
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
   position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 30px;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.submenu li a {
+  padding: 10px 15px;
+  white-space: nowrap;
+  color: #333;
+}
+
+.submenu li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* SOY CLIENTE */
+.cliente {
+  margin-left: 60px;
+  background-color: #093f72;
+  border-radius: 4px;
+}
+
+.cliente a {
+  color: white !important;
+  font-weight: bold;
+  padding: 12px 18px;
+  display: inline-block;
+}
+
+.cliente a:hover {
+  background-color: #072c4e;
+  color: white !important;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 22px;
   color: white;
   cursor: pointer;
-  z-index: 10000;
 }
 
-/* Oculta las imágenes extras en móviles */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .galeria-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 
-  .galeria {
-  padding: 40px 4px;
-  }
-
-  .galeria-grid {
-  gap: 8px;
-  }
-
-  .galeria-grid img {
-  border-radius: 2px;
-  }
-
-  .solo-escritorio {
+  
+  .top-header {
     display: none;
   }
+
+  .navbar {
+    background-color: #093f72;
+    padding: 0;
+    margin: 0;
+  }
+    .nav-container {
+    padding: 10px 15px; /* menos padding que en escritorio */
+    width: 100%;
+    margin: 0;
+  }
+
+
+  .logo span {
+    font-size: 16px;
+    color: white;
+  }
+
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: inline;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    border-top: 1px solid #ddd;
+  }
+
+  .nav-menu li a {
+    padding: 13px 20px;
+    color: #323232;
+  }
+
+  .nav-menu li a:hover {
+    background-color: #f0f0f0;
+    color: #0e1c51;
+  }
+
+  .submenu {
+    position: static;
+    background-color: #f8f8f8;
+  }
+
+  .submenu li a {
+    padding-left: 35px;
+  }
+
+  .has-submenu:hover .submenu {
+    display: none;
+  }
+
+  .has-submenu.active .submenu {
+    display: block;
+  }
+
+  .cliente {
+    margin-left: 0;
+    background-color: #1c6db0; /* NUEVO: gris */
+    width: 100%;
+    text-align: center;
+    border-radius: 0px;
+  }
+
+  .cliente a {
+    color: white !important;
+    padding: 14px 20px;
+  }
+
+  .cliente a:hover {
+    background-color: #072c4e;
+  }
 }
+
 
   </style>
 
-<section class="galeria">
-  <h2>Galería de Proyectos</h2>
-  <div class="galeria-grid">
-<img src="img/servicios/instalacion-de-equipos-piscinas.webp" alt="Proyecto 1" onclick="abrirModal(this)">
-    <img src="img/servicios/remodelacion-de-piscinas-jacuzzi.webp" alt="Proyecto 2" onclick="abrirModal(this)">
-    <img src="img/servicios/reparacion-de-piscinas.webp" alt="Proyecto 3" onclick="abrirModal(this)">
-    <img src="img/servicios/reparacion-de-piscinas.webp" alt="Proyecto 4" onclick="abrirModal(this)">
-    <img src="img/servicios/instalacion-de-equipos-piscinas.webp" alt="Proyecto 5" onclick="abrirModal(this)">
-    <img src="img/servicios/remodelacion-de-piscinas-jacuzzi.webp" alt="Proyecto 6" onclick="abrirModal(this)">
-    <img src="img/servicios/reparacion-de-piscinas.webp" alt="Proyecto 7" class="solo-escritorio" onclick="abrirModal(this)">
-    <img src="img/servicios/instalacion-de-equipos-piscinas.webp" alt="Proyecto 8" class="solo-escritorio" onclick="abrirModal(this)">
-  </div>
+  
 
-  <!-- Modal -->
-  <div id="modal" class="modal" onclick="cerrarModal()">
-    <span class="cerrar" onclick="cerrarModal(event)">✖</span>
-    <div class="modal-contenedor" onclick="event.stopPropagation()">
-      <img class="modal-imagen" id="imagenGrande">
-    </div>
+<!-- Top Header -->
+<div class="top-header">
+  <div class="contact-info">
+    <span><i class="fas fa-phone"></i>0983032939 - 0989111478</span>
+    <span>|</span>
+    <span><i class="fas fa-envelope"></i>aquimpool.ec@gmail.com</span>
   </div>
-</section>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/PiscinasAquimpool.ec/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/aquimpool.ec/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/tuempresa" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://linkedin.com/company/tuempresa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://youtube.com/@tuempresa" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+</div>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="img/logo-aquimpool.png" alt="Logo Escritorio" class="logo-desktop">
+      <img src="img/logo-aquimpool-movil.png" alt="Logo Móvil" class="logo-mobile">
+      <span>AQUIMPOOL</span>
+    </div>
+
+    <!-- Hamburguesa (para móviles) -->
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Menú -->
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html" title="Volver a la página de inicio">Inicio</a></li>
+      <li><a href="acercade.html" title="Conoce más sobre nosotros">Nosotros</a></li>
+      <li class="has-submenu">
+        <a href="#" title="Descubre nuestros servicios">Servicios <i class="fas fa-caret-down"></i></a>
+        <ul class="submenu">
+          <li><a href="mantenimiento-de-piscinas.html" title="Servicio de mantenimiento de piscinas"><i class="fas fa-tools"></i> Mantenimiento de Piscinas</a></li>
+          <li><a href="construccion-de-piscinas.html" title="Servicio de construcción de piscinas"><i class="fas fa-drafting-compass"></i> Construcción de Piscinas</a></li>
+          <li><a href="instalacion-hidraulica-de-piscinas-y-o-jacuzzi.html" title="Servicio de instalación hidraulica de piscinas"><i class="fas fa-water"></i> Instalación Hidráulica</a></li>
+          <li><a href="remodelacion-de-piscinas.html" title="Servicio de remodelación de piscinas"><i class="fas fa-sync-alt"></i> Remodelación de Piscinas</a></li>
+          <li><a href="reparacion-de-piscinas.html" title="Servicio de reparación de piscinas"><i class="fas fa-tools"></i> Reparación de Piscinas</a></li>
+          <li><a href="instalacion-de-equipos-de-piscinas.html" title="Instalación de equipos y piscinas"><i class="fas fa-cogs"></i> Instalación de Equipos</a></li>
+          <li><a href="servicios.html" title="servicios en piscinas y jacuzzis"><i class="fas fa-list"></i> Todos los Servicios</a></li>
+
+        </ul>
+      </li>
+      <li><a href="#">Productos</a></li>
+      <li><a href="#">Contactos</a></li>
+      <li class="cliente"><a href="#">Soy cliente</a></li>
+    </ul>
+  </div>
+</nav>
 
 <script>
-function abrirModal(img) {
-  const modal = document.getElementById("modal");
-  const imagenGrande = document.getElementById("imagenGrande");
-  imagenGrande.src = img.src;
-  modal.style.display = "flex";
-}
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
 
-function cerrarModal(event) {
-  event.stopPropagation();
-  document.getElementById("modal").style.display = "none";
-}
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+
+  // Submenú en móvil
+  const hasSubmenu = document.querySelector(".has-submenu");
+  hasSubmenu.addEventListener("click", function (e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      this.classList.toggle("active");
+    }
+  });
 </script>
 
-    
+  
 </body>
 </html>
