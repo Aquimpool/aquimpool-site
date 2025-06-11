@@ -114,16 +114,7 @@ body {
   transition: background 0.3s;
 }
 
-.nav-menu a:hover {
-  background-color: #0c528f;
-  color: white;
-  height: 100%;
-}
 
-/* SUBMENÚ */
-.has-submenu:hover .submenu {
-  display: block;
-}
 
 .submenu {
   display: none;
@@ -140,10 +131,7 @@ body {
   color: #333;
 }
 
-.submenu li a:hover {
-  background-color: #0c528f;
-  color: white;
-}
+
 
 /* BOTÓN SOY CLIENTE */
 .cliente {
@@ -157,6 +145,25 @@ body {
   border-radius: 20px;
   transition: all 0.3s ease;
   color: #0c528f;
+}
+
+@media (hover: hover) and (pointer: fine){
+  .nav-menu a:hover {
+  background-color: #0c528f;
+  color: white;
+  height: 100%;
+}
+
+/* SUBMENÚ */
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu li a:hover {
+  background-color: #0c528f;
+  color: white;
+}
+
 }
 
 .cliente a:hover {
@@ -229,7 +236,7 @@ body {
     position: static;
     box-shadow: none;
     display: none;
-    background-color: white;
+    background-color: rgb(249, 249, 249);
     padding-left: 10px;
   }
 
@@ -242,7 +249,8 @@ body {
   }
 
   .cliente {
-    margin-left: 0;
+      width: 90%;
+  margin: 0;
   }
 
   .cliente a {
