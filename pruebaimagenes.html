@@ -61,7 +61,7 @@ body {
 /* NAVBAR */
 .navbar {
   background-color: #d9d9d9;
-  padding: 10px 60px;
+  padding: 15px 60px;
   position: relative;
   z-index: 999;
 }
@@ -74,7 +74,7 @@ body {
 
 /* LOGOS */
 .logo img {
-  height: 40px;
+  height: 35px;
 }
 
 .logo-desktop {
@@ -88,7 +88,7 @@ body {
 .logo span {
   font-weight: bold;
   margin-left: 0px;
-  font-size: 18px;
+  font-size: 15px;
   color: #0c528f;
 }
 
@@ -97,7 +97,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 0.5px;
+  gap: 0.1px;
 }
 
 .nav-menu li {
@@ -108,40 +108,41 @@ body {
 
 .nav-menu a {
   text-decoration: none;
-  color: #1c1d25;
-  padding: 12px 20px;
-  display: block;
-  transition: background 0.3s;
+  color: #1f1f1f;
+  padding: 25px 20px;
+  transition: background 0.2s;
 }
-
 
 
 .submenu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 235%;
   background-color: white;
-  min-width: 220px;
+  min-width: 260px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   z-index: 1000;
+  list-style: none;
 }
 
 .submenu li a {
-  padding: 10px 20px;
-  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* separa el ícono del texto */
+  padding: 15px 18px; /* Aumenta el padding vertical */
 }
 
 
 
 /* BOTÓN SOY CLIENTE */
 .cliente {
-  margin-left: 110px; /* ✅ Gran separación del resto del menú */
+  margin-left: 150px; /* ✅ Gran separación del resto del menú */
 }
 
 .cliente a {
   background-color: transparent;
-  border: 2px solid #0c528f;
-  padding: 8px 16px;
+  border: 2.1px solid #0c528f;
+  padding: 10px 20px;
   border-radius: 20px;
   transition: all 0.3s ease;
   color: #0c528f;
@@ -163,13 +164,13 @@ body {
   background-color: #0c528f;
   color: white;
 }
-
-}
-
 .cliente a:hover {
   background-color: #0c528f;
   color: white;
 }
+
+}
+
 
 /* HAMBURGUESA */
 .hamburger {
@@ -216,32 +217,38 @@ body {
     display: none;
   }
 
+  .nav-menu a{
+    display: block;
+  }
+
   .nav-menu li {
     width: 100%;
     text-align: left;
   }
 
   .nav-menu li a {
-    padding: 14px 20px;
-    color: #0c528f;
-    border-bottom: 1px solid #e0e0e0;
+  padding: 13px 20px;
+  color: #222222; /* negro */
+  border-bottom: 1px solid #f5f5f5;
   }
 
   .nav-menu li a:hover {
-    background-color: transparent;
-    color: #0c528f;
+    background-color: #ffffff;
+    color: #222222;
   }
 
   .submenu {
     position: static;
     box-shadow: none;
     display: none;
-    background-color: rgb(249, 249, 249);
-    padding-left: 10px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 14px;
   }
 
   .submenu li a {
     padding: 10px 20px;
+    color: #3a3a3a; /* negro */
+    font-weight: normal; /* mantiene peso normal */
   }
 
   .has-submenu.active .submenu {
@@ -249,13 +256,18 @@ body {
   }
 
   .cliente {
-      width: 90%;
-  margin: 0;
+    margin: 0;
+    border-bottom: 0px solid #e9e9e9;
+    color: #0c528f;
   }
 
   .cliente a {
-    border-color: #0c528f;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    background-color: #f5f5f5;
     color: #0c528f;
+    font-weight: 600; /* semi-bold */
   }
 
   .cliente a:hover {
@@ -319,31 +331,30 @@ body {
 
         </ul>
       </li>
-      <li><a href="#">Productos</a></li>
-      <li><a href="#">Contactos</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="acercade.html">Contactos</a></li>
       <li class="cliente"><a href="#">Soy cliente</a></li>
     </ul>
   </div>
 </nav>
 
 <script>
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-menu");
-  const submenuItems = document.querySelectorAll(".has-submenu");
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  const submenuToggle = document.querySelector('.has-submenu > a');
 
-  // Toggle del menú principal
-  hamburger.addEventListener("click", () => {
-    navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
+  // Mostrar/Ocultar menú hamburguesa
+  hamburger.addEventListener('click', () => {
+    navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
   });
 
-  // Toggle para submenús
-  submenuItems.forEach(item => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault(); // previene navegación en móviles
-      item.classList.toggle("active");
-    });
+  // Alternar submenú en móviles
+  submenuToggle.addEventListener('click', (e) => {
+    e.preventDefault(); // ← Esto es esencial para evitar el salto al tope de la página
+    submenuToggle.parentElement.classList.toggle('active');
   });
 </script>
+
 
 
   
