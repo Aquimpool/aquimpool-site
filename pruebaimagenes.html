@@ -58,74 +58,69 @@ body {
 
 /* ------- AREA DE MENU --------*/
 
-/* NAVBAR GENERAL */
+/* NAVBAR */
 .navbar {
-  background-color: rgb(231, 231, 231);
-  position: relative;
+  background-color: #d9d9d9;
   padding: 10px 60px;
+  position: relative;
+  z-index: 999;
 }
 
 .nav-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 10px 60px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* LOGO */
-.logo {
-  display: flex;
   align-items: center;
-  color: #0e5292;
-  font-size: 20px;
-  font-weight: bold;
 }
 
+/* LOGOS */
 .logo img {
   height: 40px;
-  margin-right: 10px;
 }
 
 .logo-desktop {
-  display: inline;
+  display: inline-block;
 }
 
 .logo-mobile {
   display: none;
 }
 
-/* NAV MENU */
+.logo span {
+  font-weight: bold;
+  margin-left: 0px;
+  font-size: 18px;
+  color: #0c528f;
+}
+
+/* MENÚ */
 .nav-menu {
   list-style: none;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  font-weight: 600;
+  gap: 0.5px;
 }
 
 .nav-menu li {
   position: relative;
+  margin: o;
 }
 
-.nav-menu li a {
-  display: block;
-  padding: 14px 18px;
+
+.nav-menu a {
   text-decoration: none;
-  color: #333;
-  transition: background-color 0.3s, color 0.3s;
+  color: #1c1d25;
+  padding: 12px 20px;
+  display: block;
+  transition: background 0.3s;
 }
 
-/* HOVER Y ACTIVE EN ESCRITORIO */
-.nav-menu li a:hover,
-.nav-menu li a.active {
-  background-color: #093f72;
+.nav-menu a:hover {
+  background-color: #0c528f;
   color: white;
+  height: 100%;
 }
 
-/* SUBMENU */
+/* SUBMENÚ */
 .has-submenu:hover .submenu {
   display: block;
 }
@@ -133,74 +128,61 @@ body {
 .submenu {
   display: none;
   position: absolute;
-  background-color: #fff;
   top: 100%;
-  left: 0;
-  min-width: 160px;
-  z-index: 10;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: white;
+  min-width: 220px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
 .submenu li a {
-  padding: 10px 15px;
-  white-space: nowrap;
+  padding: 10px 20px;
   color: #333;
 }
 
 .submenu li a:hover {
-  background-color: #f0f0f0;
+  background-color: #0c528f;
+  color: white;
 }
 
-/* SOY CLIENTE */
+/* BOTÓN SOY CLIENTE */
 .cliente {
-  margin-left: 60px;
-  background-color: #093f72;
-  border-radius: 4px;
+  margin-left: 110px; /* ✅ Gran separación del resto del menú */
 }
 
 .cliente a {
-  color: white !important;
-  font-weight: bold;
-  padding: 12px 18px;
-  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #0c528f;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  color: #0c528f;
 }
 
 .cliente a:hover {
-  background-color: #072c4e;
-  color: white !important;
+  background-color: #0c528f;
+  color: white;
 }
 
-/* HAMBURGER */
+/* HAMBURGUESA */
 .hamburger {
   display: none;
-  font-size: 22px;
-  color: white;
+  font-size: 24px;
   cursor: pointer;
+  color: #0c528f;
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
-
-  
+/* MEDIA QUERIES PARA RESPONSIVE */
+/* RESPONSIVE MENU */
+@media screen and (max-width: 768px) {
   .top-header {
     display: none;
   }
 
   .navbar {
-    background-color: #093f72;
-    padding: 0;
-    margin: 0;
-  }
-    .nav-container {
-    padding: 10px 15px; /* menos padding que en escritorio */
-    width: 100%;
-    margin: 0;
-  }
-
-
-  .logo span {
-    font-size: 16px;
-    color: white;
+    background-color: #0c528f;
+    padding: 10px 20px;
   }
 
   .logo-desktop {
@@ -208,52 +190,51 @@ body {
   }
 
   .logo-mobile {
-    display: inline;
-    height: 30px;
-    margin-right: 10px;
+    display: inline-block;
+    height: 35px;
   }
 
   .hamburger {
     display: block;
+    color: white;
   }
 
   .nav-menu {
-    display: none;
     flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
     background-color: white;
-  }
-
-  .nav-menu.show {
-    display: flex;
+    display: none;
   }
 
   .nav-menu li {
     width: 100%;
-    border-top: 1px solid #ddd;
+    text-align: left;
   }
 
   .nav-menu li a {
-    padding: 13px 20px;
-    color: #323232;
+    padding: 14px 20px;
+    color: #0c528f;
+    border-bottom: 1px solid #e0e0e0;
   }
 
   .nav-menu li a:hover {
-    background-color: #f0f0f0;
-    color: #0e1c51;
+    background-color: transparent;
+    color: #0c528f;
   }
 
   .submenu {
     position: static;
-    background-color: #f8f8f8;
+    box-shadow: none;
+    display: none;
+    background-color: white;
+    padding-left: 10px;
   }
 
   .submenu li a {
-    padding-left: 35px;
-  }
-
-  .has-submenu:hover .submenu {
-    display: none;
+    padding: 10px 20px;
   }
 
   .has-submenu.active .submenu {
@@ -262,21 +243,20 @@ body {
 
   .cliente {
     margin-left: 0;
-    background-color: #1c6db0; /* NUEVO: gris */
-    width: 100%;
-    text-align: center;
-    border-radius: 0px;
   }
 
   .cliente a {
-    color: white !important;
-    padding: 14px 20px;
+    border-color: #0c528f;
+    color: #0c528f;
   }
 
   .cliente a:hover {
-    background-color: #072c4e;
+    background-color: transparent;
+    color: #0c528f;
   }
 }
+
+
 
 
   </style>
@@ -341,20 +321,22 @@ body {
 <script>
   const hamburger = document.getElementById("hamburger");
   const navMenu = document.getElementById("nav-menu");
+  const submenuItems = document.querySelectorAll(".has-submenu");
 
+  // Toggle del menú principal
   hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
+    navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
   });
 
-  // Submenú en móvil
-  const hasSubmenu = document.querySelector(".has-submenu");
-  hasSubmenu.addEventListener("click", function (e) {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      this.classList.toggle("active");
-    }
+  // Toggle para submenús
+  submenuItems.forEach(item => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault(); // previene navegación en móviles
+      item.classList.toggle("active");
+    });
   });
 </script>
+
 
   
 </body>
