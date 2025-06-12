@@ -220,13 +220,13 @@ body {
   .navbar {
     background-color: #0c528f;
     padding: 10px 20px;
-    position: fixed;
+    position: relative;
     top: 0 !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* sombra suave */
   }
 
     .logo span {
-    font-size: 14px;
+    font-size: 13px;
     color: white;
     font-weight: normal;
     display: inline; /* por si se está ocultando */
@@ -243,12 +243,18 @@ body {
 
   .logo-mobile {
     display: inline-block;
-    height: 35px;
+  
   }
+
+  .logo-mobile {
+  height: 30px !important;
+  width: auto !important;
+}
 
   .hamburger {
     display: block;
     color: white;
+    font-size: 20px;
   }
 
   .nav-menu {
@@ -268,7 +274,7 @@ body {
 
   .nav-menu li {
     width: 100%;
-    text-align: left;
+    text-align: center;
   }
 
   .nav-menu li a {
@@ -286,15 +292,19 @@ body {
     position: static;
     box-shadow: none;
     display: none;
-    background-color: rgb(255, 255, 255);
-    padding-left: 14px;
+    background-color: rgb(244, 244, 244);
+
   }
 
   .submenu li a {
     padding: 10px 20px;
     color: #3a3a3a; /* negro */
     font-weight: normal; /* mantiene peso normal */
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
 
   .has-submenu.active .submenu {
     display: block;
