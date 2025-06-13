@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contactos - Aquimpool</title>
+  <title>Contáctanos | Servicio y Asesoría para Piscinas - Aquimpool</title>
   <meta name="description" content="Contáctanos en Aquimpool: soluciones personalizadas para piscinas en Ecuador. Atención profesional y puntualidad garantizada.">
   <meta name="keywords" content="contacto Aquimpool, soluciones para piscinas, mantenimiento de piscinas, Ecuador, servicios profesionales">
   <meta name="author" content="Aquimpool Piscinas">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aquimpool.com.ec/contacto.html">
     
     <!-- favicon -->
   <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
@@ -18,7 +19,6 @@
   <link rel="manifest" href="/img/site.webmanifest" />
 
     <script src="https://kit.fontawesome.com/7331698cb2.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/stylesContacto.css">
     <script src="js/script.js"></script>
     <script src="js/scriptMenu.js"></script>
@@ -70,141 +70,158 @@
 <body>
     <!-- HTML: Barra superior + Navegación -->
   <!-- Barra superior -->
-  <header class="top-header">
-    <div class="left">
-      <span><i class="fa-solid fa-phone"></i> 0983032939 - 0989111478</span>
-      <span>|</span>
-      <span><i class="fas fa-envelope"></i> aquimpool.ec@gmail.com</span>
-    </div>
-    <div class="right">
-      <a href="https://www.facebook.com/PiscinasAquimpool.ec/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/aquimpool.ec/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com/tuempresa" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://linkedin.com/company/tuempresa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://youtube.com/@tuempresa" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
-  </header>
+<!-- Top Header -->
+<div class="top-header">
+  <div class="contact-info">
+    <span><i class="fas fa-phone"></i>0983032939 - 0989111478</span>
+    <span>|</span>
+    <span><i class="fas fa-envelope"></i>aquimpool.ec@gmail.com</span>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/PiscinasAquimpool.ec/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/aquimpool.ec/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/tuempresa" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://linkedin.com/company/tuempresa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://youtube.com/@tuempresa" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+</div>
 
-  <!-- Barra de navegación -->
-  <nav class="main-nav">
+<!-- NAVIGATION BAR -->
+<nav class="navbar" aria-label="Navegación principal">
+  <div class="nav-container">
+    <!-- Logo -->
     <div class="logo">
       <a href="index.html">
-        <img src="img/LOGO AQUIMPOOL1.png" alt="logo de la empresa" width="80" height="45">
+        <img src="img/logo-aquimpool.png" alt="Logo Escritorio" class="logo-desktop">
+        <img src="img/logo-aquimpool-movil.png" alt="Logo Móvil" class="logo-mobile">
       </a>
       <span>AQUIMPOOL</span>
     </div>
 
-  <ul class="nav-menu">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="acercade.html">Nosotros</a></li>
-    <li class="has-submenu">
-      <a >Servicios</a>
-      <ul class="submenu">
-        <li><a href="mantenimiento-de-piscinas.html">Mantenimiento de Piscinas</a></li>
-        <li><a href="construccion-de-piscinas.html">Construcción de Piscinas</a></li>
-        <li><a href="instalacion-hidraulica-de-piscinas-y-o-jacuzzi.html">Instalación Hidráulica</a></li>        
-        <li><a href="remodelacion-de-piscinas.html">Remodelación de Piscinas</a></li>
-        <li><a href="reparacion-de-piscinas.html">Reparación de Piscinas</a></li>
-        <li><a href="instalacion-de-equipos-de-piscinas.html" >Instalación de equipos</a></li>
-        <li><a href="servicios.html" >Todos los servicios</a></li>
-
-      </ul>
-    </li>
-    <li><a href="productos.html">Productos</a></li>
-    <li><a href="contacto.html" class="active">Contacto</a></li>
-  </ul>
-
-    <!-- Botón cliente -->
-    <div class="btn-client-container">
-      <a href="#" class="btn-client">Soy cliente</a>
+    <!-- Hamburguesa (para móviles) -->
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars open-icon"></i>
+        <i class="fas fa-times close-icon" style="display: none;"></i>
     </div>
 
-    <!-- Menú hamburguesa -->
-    <div class="menu-toggle">
-      <i class="fas fa-bars"></i>
-    </div>
-  </nav>
+    <!-- Menú -->
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html" title="Volver a la página de inicio">Inicio</a></li>
+      <li><a href="acercade.html" title="Conoce más sobre nosotros">Nosotros</a></li>
+      <li class="has-submenu">
+        <a href="#" title="Descubre nuestros servicios">Servicios <i class="fas fa-caret-down"></i></a>
+        <ul class="submenu">
+          <li><a href="mantenimiento-de-piscinas.html" title="Servicio de mantenimiento de piscinas"><i class="fas fa-tools"></i> Mantenimiento de Piscinas</a></li>
+          <li><a href="construccion-de-piscinas.html" title="Servicio de construcción de piscinas"><i class="fas fa-drafting-compass"></i> Construcción de Piscinas</a></li>
+          <li><a href="instalacion-hidraulica-de-piscinas-y-o-jacuzzi.html" title="Servicio de instalación hidraulica de piscinas"><i class="fas fa-water"></i> Instalación Hidráulica</a></li>
+          <li><a href="remodelacion-de-piscinas.html" title="Servicio de remodelación de piscinas"><i class="fas fa-sync-alt"></i> Remodelación de Piscinas</a></li>
+          <li><a href="reparacion-de-piscinas.html" title="Servicio de reparación de piscinas"><i class="fas fa-tools"></i> Reparación de Piscinas</a></li>
+          <li><a href="instalacion-de-equipos-de-piscinas.html" title="Instalación de equipos y piscinas"><i class="fas fa-cogs"></i> Instalación de Equipos</a></li>
+          <li><a href="servicios.html" title="servicios en piscinas y jacuzzis"><i class="fas fa-list"></i> Todos los Servicios</a></li>
+
+        </ul>
+      </li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="contacto.html" class="active">Contactos</a></li>
+      <li class="cliente"><a href="#">Soy cliente</a></li>
+    </ul>
+  </div>
+</nav>
+
 
   <!-- Cabecera -->
   <div class="header">
     Contactos
   </div>
 
-  <!-- Contenedor principal horizontal -->
-  <div class="container">
+  <section class="contacto-aquimpool">
+    <div class="info-contacto-aquimpool">
+      <h2>Información de Contacto</h2>
+      <p class="descripcion-contacto">¿Tienes dudas o deseas cotizar nuestros servicios? Contáctanos por cualquiera de nuestros canales. Estamos listos para ayudarte.</p>
+      
+      <div class="item-contacto">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="texto-contacto">Guayaquil, Samborondón, Las Joyas</div>
+      </div>
+      <div class="item-contacto">
+        <i class="fas fa-envelope"></i>
+        <div class="texto-contacto">aquimpool.ec@gmail.com</div>
+      </div>
+      <div class="item-contacto">
+        <i class="fas fa-phone"></i>
+        <div class="texto-contacto">0983032939 - 0989111478</div>
+      </div>
 
-    <!-- Información de contacto y mapa -->
-    <div class="contact-info">
-      <h3>Encuéntranos en:</h3>
-      <p> <i class="fa-solid fa-location-dot"></i> <strong>Guayaquil - Ecuador</strong></p>
-      <p><strong>Ubicación:</strong> Guayaquil, samborondon,Las Joyas</p>
-      <p><strong>Email:</strong> aquimpool.ec@gmail.com</p>
-      <p><strong>Celular:</strong> 0983032939 - 0989111478</p>
-      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.3193533935723!2d-79.91547712551201!3d-2.0279815368855383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d11685d3a6ccd%3A0x3ea16068bf749488!2sAQUIMPOOL%20Piscinas%20Cia.%20Ltda.%20-%20GUAYAQUIL!5e0!3m2!1ses!2sec!4v1748902780587!5m2!1ses!2sec"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="botones-contacto">
+        <a href="https://api.whatsapp.com/message/SKN67A7IL7Q6D1?autoload=1&app_absent=0" class="boton-contacto boton-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="tel:0983032939" class="boton-contacto boton-llamada">
+          <i class="fas fa-phone"></i> Llamar
+        </a>
+      </div>
     </div>
 
+    <div class="mapa-contacto">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15949.277359724743!2d-79.912902!3d-2.027987!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d11685d3a6ccd%3A0x3ea16068bf749488!2sAQUIMPOOL%20Piscinas%20Cia.%20Ltda.%20-%20GUAYAQUIL!5e0!3m2!1ses!2sec!4v1749775457361!5m2!1ses!2sec" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section class="seccion-formulario-aquimpool">
+  <div class="contenedor-formulario-aquimpool">
     <!-- Formulario -->
-    <div class="form-section">
-      <h3>Ponte en contacto con nosotros</h3>
-      <p>Completa el formulario y uno de nuestros asesores te contactará pronto.<br>
-      Ya sea información de productos, soporte técnico o cotización, en <strong>AQUIMPOOL PISCINAS</strong> estamos para ayudarte.</p>
-
+    <div class="formulario-aquimpool">
+      <h2>Envíanos un Mensaje</h2>
+      <p class="descripcion-formulario"><i class="fas fa-envelope-open-text"></i> Estamos encantados de ayudarte con cualquier consulta o solicitud.</p>
+      
       <form>
-        <div class="form-grid">
-          <div>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
-          </div>
-
-          <div>
-            <label for="apellido">Apellidos</label>
-            <input type="text" id="apellido" name="apellido" required>
-          </div>
-
-          <div>
-            <label for="ciudad">Ciudad</label>
-            <select id="ciudad" name="ciudad" required>
-              <option value="">Selecciona una ciudad</option>
-              <option>Quito</option>
-              <option>Guayaquil</option>
-              <option>Cuenca</option>
-              <option>Ambato</option>
-              <option>Manta</option>
-              <option>Loja</option>
-              <option>Ibarra</option>
-              <option>Portoviejo</option>
-              <option>Machala</option>
-              <option>Riobamba</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="correo">Correo <span style="color: red">*</span></label>
-            <input type="email" id="correo" name="correo" required>
-          </div>
-
-          <div class="full-width">
-            <label for="telefono">Número de teléfono</label>
-            <input type="tel" id="telefono" name="telefono">
-          </div>
-
-          <div class="full-width">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="2" required></textarea>
-          </div>
+        <div class="grupo-input">
+          <label for="nombre"><i class="fas fa-user"></i> Nombre Completo</label>
+          <input type="text" id="nombre" name="nombre" required>
         </div>
 
-        <div>
-            <p><STRong>Aquimpool Piscinas </STRong>respeta tu privacidad. Usaremos tu información solo para gestionar tu cuenta y ofrecerte los servicios solicitados. Ocasionalmente, te contactaremos con novedades y contenidos de tu interés.</p>
+        <div class="grupo-input">
+          <label for="ciudad"><i class="fas fa-city"></i> Ciudad</label>
+          <input type="text" id="ciudad" name="ciudad">
         </div>
 
-        <button type="submit" class="btn-submit">Enviar</button>
+        <div class="grupo-input">
+          <label for="correo"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <div class="grupo-input">
+          <label for="telefono"><i class="fas fa-phone"></i> Teléfono</label>
+          <input type="tel" id="telefono" name="telefono">
+        </div>
+
+        <div class="grupo-input">
+          <label for="mensaje"><i class="fas fa-comment-dots"></i> Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="2" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar-formulario">
+          <i class="fas fa-paper-plane"></i> Enviar Mensaje
+        </button>
       </form>
     </div>
 
+    <!-- Información lateral -->
+    <div class="info-lateral-formulario">
+      <h3><i class="fas fa-info-circle"></i> Información</h3>
+      <ul>
+        <li><i class="fas fa-clock"></i> Atención: Lunes a Sábado - 9h00 a 18h00</li>
+        <li><i class="fas fa-map-marker-alt"></i> Estamos en Samborondón, Las Joyas.</li>
+        <li>Aquimpool Piscinas respeta tu privacidad. Usaremos tu información solo para gestionar tu cuenta y ofrecerte los servicios solicitados. Ocasionalmente, te contactaremos con novedades y contenidos de tu interés.</li>
+        <li><i class="fas fa-shield-alt"></i> Tus datos están seguros con nosotros.</li>
+        <li><i class="fas fa-file-contract"></i> Al enviar este formulario aceptas nuestros <a href="#">Términos y Condiciones</a>.</li>
+      </ul>
+    </div>
   </div>
+</section>
 
-  <!--footer o pie de pagina -->
+
+<!--footer o pie de pagina -->
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-column">
@@ -259,6 +276,18 @@
 <a href="https://api.whatsapp.com/message/SKN67A7IL7Q6D1?autoload=1&app_absent=0" class="float" target="_blank">
 <i class="fa fa-whatsapp my-float"></i>
 </a>
+
+<!-- Aviso de Cookies -->
+<div id="cookie-banner" style="display: none;">
+    <p>
+        Este sitio utiliza cookies para mejorar la experiencia del usuario. 
+        <a href="/politica-cookies" style="color: white; text-decoration: underline;">Más información</a>
+    </p>
+    <div class="buttons">
+        <button id="aceptar-cookies">Aceptar</button>
+        <button id="rechazar-cookies">Cancelar</button>
+    </div>
+</div>
 
 </body>
 </html>

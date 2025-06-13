@@ -8,6 +8,7 @@
   <meta name="keywords" content="piscinas, mantenimiento de piscinas, construcción de piscinas, equipos de piscinas, Ecuador, Aquimpool, soluciones integrales">
   <meta name="author" content="Aquimpool Piscinas">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aquimpool.com.ec/">
 
   <!-- Open Graph para redes sociales -->
   <meta property="og:title" content="Aquimpool - Expertos en Piscinas en Ecuador" />
@@ -26,9 +27,11 @@
 
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://kit.fontawesome.com/7331698cb2.js" crossorigin="anonymous"></script>
-  <script src="js/script.js"></script>
   <script src="js/scriptMenu.js"></script>
+  <script src="js/animacion.js"></script>
   <script src="js/cookies.js"></script> 
+  <script src="js/script.js"></script>
+
 
   <!-- Schema: LocalBusiness -->
 <script type="application/ld+json">
@@ -51,10 +54,7 @@
   "openingHours": "Mo-Fr 09:00-18:00",
   "sameAs": [
     "https://www.facebook.com/PiscinasAquimpool.ec/?locale=es_LA",
-    "https://www.instagram.com/aquimpool.ec/",
-    "https://twitter.com/tuempresa",
-    "https://linkedin.com/company/tuempresa",
-    "https://youtube.com/@tuempresa"
+    "https://www.instagram.com/aquimpool.ec/"
   ],
   "description": "Soluciones integrales para piscinas en Ecuador. Construcción, mantenimiento y equipos de alta calidad. Más de 20 años de experiencia.",
   "logo": "https://aquimpool.com.ec/img/LOGO%20AQUIMPOOL1.png"
@@ -72,6 +72,7 @@
 </script>
 
 </head>
+
 <body>
 
 <!-- Top Header -->
@@ -91,7 +92,7 @@
 </div>
 
 <!-- NAVIGATION BAR -->
-<nav class="navbar">
+<nav class="navbar" aria-label="Navegación principal">
   <div class="nav-container">
     <!-- Logo -->
     <div class="logo">
@@ -104,7 +105,8 @@
 
     <!-- Hamburguesa (para móviles) -->
     <div class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
+        <i class="fas fa-bars open-icon"></i>
+        <i class="fas fa-times close-icon" style="display: none;"></i>
     </div>
 
     <!-- Menú -->
@@ -112,7 +114,7 @@
       <li><a href="index.html" title="Volver a la página de inicio" class="active">Inicio</a></li>
       <li><a href="acercade.html" title="Conoce más sobre nosotros">Nosotros</a></li>
       <li class="has-submenu">
-        <a href="#" title="Descubre nuestros servicios">Servicios <i class="fas fa-caret-down"></i></a>
+        <a href="#" aria-label="Ir a sección de servicios" title="Descubre nuestros servicios">Servicios <i class="fas fa-caret-down"></i></a>
         <ul class="submenu">
           <li><a href="mantenimiento-de-piscinas.html" title="Servicio de mantenimiento de piscinas"><i class="fas fa-tools"></i> Mantenimiento de Piscinas</a></li>
           <li><a href="construccion-de-piscinas.html" title="Servicio de construcción de piscinas"><i class="fas fa-drafting-compass"></i> Construcción de Piscinas</a></li>
@@ -120,20 +122,20 @@
           <li><a href="remodelacion-de-piscinas.html" title="Servicio de remodelación de piscinas"><i class="fas fa-sync-alt"></i> Remodelación de Piscinas</a></li>
           <li><a href="reparacion-de-piscinas.html" title="Servicio de reparación de piscinas"><i class="fas fa-tools"></i> Reparación de Piscinas</a></li>
           <li><a href="instalacion-de-equipos-de-piscinas.html" title="Instalación de equipos y piscinas"><i class="fas fa-cogs"></i> Instalación de Equipos</a></li>
-          <li><a href="servicios.html" title="servicios en piscinas y jacuzzis"><i class="fas fa-list"></i> Todos los Servicios</a></li>
+          <li><a href="servicios.html" aria-label="Ir a sección de servicios" title="servicios en piscinas y jacuzzis"><i class="fas fa-list"></i> Todos los Servicios</a></li>
 
         </ul>
       </li>
       <li><a href="productos.html">Productos</a></li>
-      <li><a href="acercade.html">Contactos</a></li>
+      <li><a href="contacto.html">Contactos</a></li>
       <li class="cliente"><a href="#">Soy cliente</a></li>
     </ul>
   </div>
 </nav>
 
 <!-- Sección Hero / Banner Principal -->
-<section class="hero-section">
-  <div class="hero-content">
+<section class="hero-section fade-up">
+  <div class="hero-content staggered-fade">
     <h1 class="hero-title">Soluciones integrales para piscinas con AQUIMPOOL</h1>
     <p class="hero-subtitle">Calidad y profesionalismo a tu alcance.</p>
     <a href="servicios.html" class="hero-button">Conoce nuestros servicios</a>
@@ -141,7 +143,7 @@
 </section>
 
 <!-- Sección Sobre Nosotros -->
-<section class="about-section">
+<section class="about-section fade-up">
   <div class="about-image">
     <!-- Reemplaza con tu imagen -->
     <img src="img/sobre-nosotros.webp" alt="Equipo de trabajo Aquimpool Piscinas, guayaquil, samborondón, ecuador" loading="lazy" />
@@ -149,7 +151,7 @@
       <strong>Más de 20 años de experiencia</strong>
     </div>
   </div>
-  <div class="about-content">
+  <div class="about-content staggered-fade">
     <h4>SOBRE NOSOTROS</h4>
     <h2>Tu aliado confiable en proyectos de piscina</h2>
     <p>
@@ -164,17 +166,17 @@
 </section>
 
 <!-- Sección Galeria de fotos -->
-<section class="galeria">
+<section class="galeria staggered-fade">
   <h4>GALERIA SOBRE NUESTROS TRABAJOS REALIZADOS</h4>
   <div class="galeria-grid">
-    <img src="img/servicios/trabajos-realizados/construccion-de-velo-de-agua.webp" alt="cascadas artificiales guayaquil y samborondon" onclick="abrirModal(this)">
-    <img src="img/servicios/trabajos-realizados/construccion-de-piscina1.webp" alt="construcción de piscinas guayaquil" onclick="abrirModal(this)">
-    <img src="img/servicios/trabajos-realizados/construccion-de-piscina2.webp" alt="construcción de piscinas samborondon" onclick="abrirModal(this)">
-    <img src="img/servicios/trabajos-realizados/construccion-de-piscina3.webp" alt="cosntrucción de jacuzzis guayaquil" onclick="abrirModal(this)">
-    <img src="img/servicios/trabajos-realizados/construccion-de-piscina4.webp" alt="construcción de jacuzzis samborondon" onclick="abrirModal(this)">
-    <img src="img/servicios/trabajos-realizados/construccion-de-piscina5.webp" alt="Construcción de piscinas ecuador" onclick="abrirModal(this)">
-    <img src="img/servicios/mantenimiento1.webp" alt="Proyecto 7" class="solo-escritorio" onclick="abrirModal(this)">
-    <img src="img/servicios/remodelacion-de-piscinas-jacuzzi.webp" alt="construccion de piscinas modernas en guayaquil y samborondón" class="solo-escritorio" onclick="abrirModal(this)">
+    <img src="img/servicios/trabajos-realizados/construccion-de-velo-de-agua.webp" alt="cascadas artificiales guayaquil y samborondon" loading="lazy" onclick="abrirModal(this)">
+    <img src="img/servicios/trabajos-realizados/construccion-de-piscina1.webp" alt="construcción de piscinas guayaquil" loading="lazy" onclick="abrirModal(this)">
+    <img src="img/servicios/trabajos-realizados/construccion-de-piscina2.webp" alt="construcción de piscinas samborondon" loading="lazy" onclick="abrirModal(this)">
+    <img src="img/servicios/trabajos-realizados/construccion-de-piscina3.webp" alt="cosntrucción de jacuzzis guayaquil" loading="lazy" onclick="abrirModal(this)">
+    <img src="img/servicios/trabajos-realizados/construccion-de-piscina4.webp" alt="construcción de jacuzzis samborondon" loading="lazy" onclick="abrirModal(this)">
+    <img src="img/servicios/trabajos-realizados/construccion-de-piscina5.webp" alt="Construcción de piscinas ecuador" loading="lazy" onclick="abrirModal(this)">
+    <img src="img/servicios/mantenimiento1.webp" alt="mantenimiento de piscinas isla mocoli" loading="lazy" class="solo-escritorio" onclick="abrirModal(this)">
+    <img src="img/servicios/remodelacion-de-piscinas-jacuzzi.webp" loading="lazy" alt="construccion de piscinas modernas en guayaquil y samborondón" class="solo-escritorio" onclick="abrirModal(this)">
   </div>
 
   <!-- Modal -->
@@ -188,20 +190,20 @@
 
 <!--Seccion servicios -->
 <section class="services-section">
-  <div class="section-header">
+  <div class="section-header staggered-fade">
     <h4>Nuestros Servicios</h4>
     <h2>Soluciones Profesionales para tu Piscina</h2>
   </div>
   <div class="services-grid">
-    <div class="service-card">
-      <div class="service-top">
-        <i class="fa-solid fa-water-ladder"></i>
+    <div class="service-card staggered-fade">
+      <div class="service-top ">
+        <i class="fa-solid fa-water-ladder "></i>
         <span>Mantenimiento de Piscinas</span>
       </div>
       <p>Limpieza profunda, balanceamos el pH, desinfectamos y aplicamos productos seguros para una experiencia saludable.</p>
       <a href="mantenimiento-de-piscinas.html">Leer más...</a>
     </div>
-    <div class="service-card">
+    <div class="service-card staggered-fade">
       <div class="service-top">
         <i class="fa-solid fa-person-digging"></i>
         <span>Construcción de Piscinas</span>
@@ -209,7 +211,7 @@
       <p>Diseño y construcción de piscinas personalizadas con materiales duraderos y acabados profesionales.</p>
       <a href="construccion-de-piscinas.html">Leer más...</a>
     </div>
-    <div class="service-card">
+    <div class="service-card staggered-fade">
       <div class="service-top">
         <i class="fas fa-tools"></i>
         <span>Instalación de Equipos</span>
@@ -217,7 +219,7 @@
       <p>Colocamos bombas, filtros, luces LED, climatizadores, sistemas hidraulicos y más para un funcionamiento óptimo.</p>
       <a href="instalacion-de-equipos-de-piscinas.html">Leer más...</a>
     </div>
-    <div class="service-card">
+    <div class="service-card staggered-fade">
       <div class="service-top">
         <i class="fas fa-hard-hat"></i>
         <span>Reparación de Piscinas</span>
@@ -231,7 +233,7 @@
 <!-- Sección formulario -->
 <section class="quote-section">
   <div class="quote-container">
-    <div class="quote-info">
+    <div class="quote-info staggered-fade">
       <h4>Solicite una cotización</h4>
       <h2>Obtenga un presupuesto gratuito</h2>
       <p>
@@ -285,12 +287,12 @@
 
 <!-- Sección por qué elegirnos -->
 <section class="why-us-section">
-  <div class="container">
+  <div class="container ">
     <div class="why-us-content">
       <div class="why-us-image">
         <img src="img/porque-elegirnos-aquimpool.webp" alt="Equipo profesional de Aquimpool trabajando en una piscina" loading="lazy" />
       </div>
-      <div class="why-us-text">
+      <div class="why-us-text staggered-fade">
         <h5>¿POR QUÉ ELEGIRNOS?</h5>
         <h2>Soluciones confiables para el mantenimiento y logística de piscinas</h2>
         <p>
@@ -308,20 +310,20 @@
 </section>
 
 <!-- Como trabajamos -->
-<section class="como-trabajamos">
+<section class="como-trabajamos ">
   <h2>¿Cómo trabajamos?</h2>
-  <div class="cards">
-    <div class="card">
+  <div class="cards ">
+    <div class="card staggered-fade">
       <i class="fas fa-search"></i>
       <h3>Inspección técnica</h3>
       <p>Visitamos tu propiedad para evaluar el estado de tu piscina y definir necesidades específicas.</p>
     </div>
-    <div class="card">
+    <div class="card staggered-fade">
       <i class="fas fa-file-invoice-dollar"></i>
       <h3>Presupuesto</h3>
       <p>Te entregamos una propuesta clara con costos detallados, sin compromisos ocultos.</p>
     </div>
-    <div class="card">
+    <div class="card staggered-fade">
       <i class="fas fa-pen-nib"></i>
       <h3>Firma de contrato</h3>
       <p>Formalizamos el servicio y fijamos fechas de ejecución, garantizando profesionalismo.</p>
@@ -330,10 +332,10 @@
 </section>
 
 <!-- seccion, Nuestro equipo -->
-<section class="team-section">
+<section class="team-section ">
   <h4 class="subheading">NUESTRO EQUIPO DE TRABAJO</h4>
   <h2 class="heading">Conozca a nuestro equipo - Aquimpool</h2>
-  <div class="team-container">
+  <div class="team-container staggered-fade">
     <div class="team-member">
       <img src="img/Aquimpool piscinas - Ivan Nieves.webp" alt="Jorge ivan Nieves Azua - Miembro del equipo" loading="lazy">
       <div class="member-info">
@@ -475,7 +477,7 @@
 <i class="fa fa-whatsapp my-float"></i>
 </a>
 
-<!-- Aviso de Cookies -->
+<!-- Aviso de Cookies 
 <div id="cookie-banner" style="display: none;">
     <p>
         Este sitio utiliza cookies para mejorar la experiencia del usuario. 
@@ -487,28 +489,7 @@
     </div>
 </div>
 
-<script>
-  let lastScrollTop = 0;
-  const topHeader = document.querySelector('.top-header');
-  const navbar = document.querySelector('.navbar');
-
-  window.addEventListener('scroll', function () {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > 100) {
-      // Oculta top-header y fija navbar
-      topHeader.classList.add('hidden');
-      navbar.classList.add('fixed');
-    } else {
-      // Muestra top-header y quita la posición fija
-      topHeader.classList.remove('hidden');
-      navbar.classList.remove('fixed');
-    }
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-  });
-</script>
-
+FINAL -->
   
 </body>
 </html>

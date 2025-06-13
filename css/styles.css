@@ -12,6 +12,7 @@ body {
   padding-top: 105px;
 }
 
+
 .top-header {
   background-color: #222;
   color: #fff;
@@ -65,7 +66,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 999;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 50px rgba(0,0,0,0.1);
     
   }
 
@@ -85,7 +86,7 @@ body {
 
 .logo img {
   height: 38px;
-    transform: translateY(-2px);
+    transform: translateY(0px);
 }
 
 .logo span {
@@ -220,13 +221,13 @@ body {
   .navbar {
     background-color: #0c528f;
     padding: 10px 20px;
-    position: fixed;
+    position: relative;
     top: 0 !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* sombra suave */
   }
 
     .logo span {
-    font-size: 14px;
+    font-size: 13px;
     color: white;
     font-weight: normal;
     display: inline; /* por si se está ocultando */
@@ -236,6 +237,14 @@ body {
     align-items: center;
   }
 
+  .logo img {
+  height: 38px;
+    transform: translateY(0px);
+}
+
+.logo span {
+  transform: translateY(1.5px);
+}
 
   .logo-desktop {
     display: none;
@@ -243,12 +252,18 @@ body {
 
   .logo-mobile {
     display: inline-block;
-    height: 35px;
+  
   }
+
+  .logo-mobile {
+  height: 30px !important;
+  width: auto !important;
+}
 
   .hamburger {
     display: block;
     color: white;
+    font-size: 20px;
   }
 
   .nav-menu {
@@ -268,7 +283,7 @@ body {
 
   .nav-menu li {
     width: 100%;
-    text-align: left;
+    text-align: center;
   }
 
   .nav-menu li a {
@@ -286,15 +301,19 @@ body {
     position: static;
     box-shadow: none;
     display: none;
-    background-color: rgb(255, 255, 255);
-    padding-left: 14px;
+    background-color: rgb(251, 251, 251);
+
   }
 
   .submenu li a {
     padding: 10px 20px;
     color: #3a3a3a; /* negro */
     font-weight: normal; /* mantiene peso normal */
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
 
   .has-submenu.active .submenu {
     display: block;
@@ -363,7 +382,7 @@ body {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
-  border-radius: 5px;
+  border-radius: 6px;
   transition: background-color 0.3s ease;
 }
 
@@ -391,7 +410,7 @@ body {
   }
 
     .hero-content {
-    margin-top: 60px; /* espacio visual adicional opcional */
+    margin-top: 15px; /* espacio visual adicional opcional */
   }
   
 }
@@ -1420,3 +1439,40 @@ body {
 #cookie-banner button:active {
     transform: scale(0.95); /* Disminuye ligeramente al hacer clic */
 }
+
+
+/*EFECTOS DE TRANSICIONES*/
+/* ANIMACIONES DE ENTRADA */
+/* Animaciones generales */
+/* Animación general */
+.fade-up, .staggered-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.show, .staggered-fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación escalonada para hijos */
+.staggered-fade.show > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: staggerFadeUp 0.6s ease forwards;
+}
+
+.staggered-fade.show > *:nth-child(1) { animation-delay: 0.1s; }
+.staggered-fade.show > *:nth-child(2) { animation-delay: 0.3s; }
+.staggered-fade.show > *:nth-child(3) { animation-delay: 0.5s; }
+.staggered-fade.show > *:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes staggerFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+

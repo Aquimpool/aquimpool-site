@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Aquimpool - Consejos y novedades sobre piscinas</title>
+
+    <meta name="description" content="Blog de Aquimpool con consejos, novedades y mantenimiento para piscinas. Aprende a cuidar tu piscina con expertos." />
+    <meta property="og:title" content="Blog de Aquimpool - Consejos y novedades sobre piscinas" />
+    <meta property="og:description" content="Explora consejos útiles, novedades y mantenimiento para piscinas. Aprende con los expertos de Aquimpool." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.tusitio.com/blog.html" />
+    <meta property="og:image" content="https://www.tusitio.com/img/blog-preview.jpg" />
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Aquimpool Piscinas">
+    <meta name="keywords" content="piscinas, mantenimiento de piscinas, Aquimpool, limpieza de piscinas, consejos para piscinas">
+
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Aquimpool" />
+    <link rel="manifest" href="/img/site.webmanifest" />
+
+    <link rel="stylesheet" href="css/estilosblog.css">
+
+    
+</head>
+<body>
+ <header>
+  <h1>Blog de Aquimpool</h1>
+  </header>
+
+  <main>
+    <!-- Lista de posts -->
+    <section id="post-grid" class="grid"></section>
+
+    <!-- Paginación -->
+    <nav class="pagination" id="pagination"></nav>
+
+    <!-- Vista individual del post (oculto por defecto) -->
+    <section id="post-detail" class="post-detail hidden">
+      <button id="backBtn" aria-label="Volver al listado de posts">&larr; Volver al blog</button>
+      <h2 id="detail-title"></h2>
+      <img id="detail-img" src="" alt="" />
+      <p id="detail-date" class="fecha"></p>
+      <p id="detail-content"></p>
+    </section>
+  </main>
+
+
+  <script src="js/blog.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "titulo": "¿Cómo mantener limpia tu piscina?",
+    "fecha": "2025-06-12",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Consejos prácticos para mantener el agua cristalina todo el año.",
+    "imagen": "img/servicios/instalacion-de-equipos-piscinas.webp"
+  },
+  {
+    "id": "2",
+    "titulo": "Equipos esenciales para una piscina saludable",
+    "fecha": "2025-06-10",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Descubre los dispositivos básicos que toda piscina debe tener.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+2"
+  },
+  {
+    "id": "3",
+    "titulo": "Errores comunes en el mantenimiento de piscinas",
+    "fecha": "2025-06-08",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Evita estos errores para prolongar la vida útil de tu piscina.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+3"
+  },
+  {
+    "id": "4",
+    "titulo": "Tipos de bombas para piscinas",
+    "fecha": "2025-06-06",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Conoce las diferencias entre bombas monofásicas, trifásicas y más.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+4"
+  },
+  {
+    "id": "5",
+    "titulo": "Cloración salina vs cloro tradicional",
+    "fecha": "2025-06-04",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "¿Cuál es mejor para tu piscina? Comparativa detallada aquí.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+5"
+  },
+  {
+    "id": "6",
+    "titulo": "Revestimientos ideales para piscinas",
+    "fecha": "2025-06-02",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "¿Vinil, fibra o porcelanato? Te ayudamos a decidir.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+6"
+  },
+  {
+    "id": "7",
+    "titulo": "Ahorrar energía en tu sistema de filtración",
+    "fecha": "2025-05-30",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Reduce consumo sin sacrificar limpieza y eficiencia.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+7"
+  },
+  {
+    "id": "8",
+    "titulo": "Piscinas inteligentes: tecnología al servicio del confort",
+    "fecha": "2025-05-28",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Automatiza tu piscina y contrólala desde tu smartphone.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+8"
+  },
+  {
+    "id": "9",
+    "titulo": "¿Cuándo debes cambiar el agua de tu piscina?",
+    "fecha": "2025-05-25",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Te contamos cómo saber si es momento de renovar el agua.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+9"
+  },
+  {
+    "id": "10",
+    "titulo": "Iluminación LED para piscinas",
+    "fecha": "2025-05-22",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Ideas modernas para embellecer tu piscina por la noche.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+10"
+  },
+  {
+    "id": "11",
+    "titulo": "Accesorios de seguridad en piscinas",
+    "fecha": "2025-05-20",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Vallas, cubiertas y otros elementos importantes para familias.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+11"
+  },
+  {
+    "id": "12",
+    "titulo": "Cómo evitar algas en tu piscina",
+    "fecha": "2025-05-18",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Consejos prácticos para eliminar y prevenir el crecimiento de algas.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+12"
+  }
+]

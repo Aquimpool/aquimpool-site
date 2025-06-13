@@ -28,9 +28,9 @@
     <link rel="manifest" href="/img/site.webmanifest" />
 
     <script src="js/scriptMenu.js"></script>
+    <script src="js/animacion.js"></script>
     <link rel="stylesheet" href="css/servicios-piscinas.css">
-     <script src="https://kit.fontawesome.com/7331698cb2.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/7331698cb2.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
     <!-- Enlazar el script externo -->
     <script src="js/faq.js" defer></script>
@@ -61,59 +61,64 @@
 <body>
     <!-- HTML: Barra superior + Navegación -->
   <!-- Barra superior -->
-  <header class="top-header">
-    <div class="left">
-      <span><i class="fa-solid fa-phone"></i> 0983032939 - 0989111478</span>
-      <span>|</span>
-      <span><i class="fas fa-envelope"></i> aquimpool.ec@gmail.com</span>
-    </div>
-    <div class="right">
-      <a href="https://www.facebook.com/PiscinasAquimpool.ec/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/aquimpool.ec/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com/tuempresa" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://linkedin.com/company/tuempresa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://youtube.com/@tuempresa" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
-  </header>
-
-<!-- Barra de navegación actualizada con submenús -->
-<nav class="main-nav">
-  <div class="logo">
-    <a href="index.html">
-      <img src="img/LOGO AQUIMPOOL1.png" alt="logo de la empresa" width="80" height="45">
-    </a>
-    <span>AQUIMPOOL</span>
+<!-- Top Header -->
+<div class="top-header">
+  <div class="contact-info">
+    <span><i class="fas fa-phone"></i>0983032939 - 0989111478</span>
+    <span>|</span>
+    <span><i class="fas fa-envelope"></i>aquimpool.ec@gmail.com</span>
   </div>
-
-  <ul class="nav-menu">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="acercade.html">Nosotros</a></li>
-    <li class="has-submenu">
-      <a  class="active">Servicios</a>
-      <ul class="submenu">
-        <li><a href="mantenimiento-de-piscinas.html" class="active">Mantenimiento de Piscinas</a></li>
-        <li><a href="construccion-de-piscinas.html">Construcción de Piscinas</a></li>
-        <li><a href="instalacion-hidraulica-de-piscinas-y-o-jacuzzi.html">Instalación Hidráulica</a></li>        
-        <li><a href="remodelacion-de-piscinas.html">Remodelación de Piscinas</a></li>
-        <li><a href="reparacion-de-piscinas.html">Reparación de Piscinas</a></li>
-        <li><a href="instalacion-de-equipos-de-piscinas.html" >Instalación de equipos</a></li>
-        <li><a href="servicios.html" >Todos los servicios</a></li>
-      </ul>
-    </li>
-    <li><a href="productos.html">Productos</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-
-  <!-- Botón cliente -->
-  <div class="btn-client-container">
-    <a href="#" class="btn-client">Soy cliente</a>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/PiscinasAquimpool.ec/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/aquimpool.ec/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/tuempresa" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://linkedin.com/company/tuempresa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://youtube.com/@tuempresa" target="_blank"><i class="fab fa-youtube"></i></a>
   </div>
+</div>
 
-  <!-- Menú hamburguesa -->
-  <div class="menu-toggle">
-    <i class="fas fa-bars"></i>
+<!-- NAVIGATION BAR -->
+<nav class="navbar" aria-label="Navegación principal">
+  <div class="nav-container">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/logo-aquimpool.png" alt="Logo Escritorio" class="logo-desktop">
+        <img src="img/logo-aquimpool-movil.png" alt="Logo Móvil" class="logo-mobile">
+      </a>
+      <span>AQUIMPOOL</span>
+    </div>
+
+    <!-- Hamburguesa (para móviles) -->
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars open-icon"></i>
+        <i class="fas fa-times close-icon" style="display: none;"></i>
+    </div>
+
+    <!-- Menú -->
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html" title="Volver a la página de inicio">Inicio</a></li>
+      <li><a href="acercade.html" title="Conoce más sobre nosotros">Nosotros</a></li>
+      <li class="has-submenu">
+        <a href="#" title="Descubre nuestros servicios" class="active">Servicios <i class="fas fa-caret-down"></i></a>
+        <ul class="submenu">
+          <li><a href="mantenimiento-de-piscinas.html" title="Servicio de mantenimiento de piscinas"><i class="fas fa-tools"></i> Mantenimiento de Piscinas</a></li>
+          <li><a href="construccion-de-piscinas.html" title="Servicio de construcción de piscinas"><i class="fas fa-drafting-compass"></i> Construcción de Piscinas</a></li>
+          <li><a href="instalacion-hidraulica-de-piscinas-y-o-jacuzzi.html" title="Servicio de instalación hidraulica de piscinas"><i class="fas fa-water"></i> Instalación Hidráulica</a></li>
+          <li><a href="remodelacion-de-piscinas.html" title="Servicio de remodelación de piscinas"><i class="fas fa-sync-alt"></i> Remodelación de Piscinas</a></li>
+          <li><a href="reparacion-de-piscinas.html" title="Servicio de reparación de piscinas"><i class="fas fa-tools"></i> Reparación de Piscinas</a></li>
+          <li><a href="instalacion-de-equipos-de-piscinas.html" title="Instalación de equipos y piscinas"><i class="fas fa-cogs"></i> Instalación de Equipos</a></li>
+          <li><a href="servicios.html" title="servicios en piscinas y jacuzzis"><i class="fas fa-list"></i> Todos los Servicios</a></li>
+
+        </ul>
+      </li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="contacto.html">Contactos</a></li>
+      <li class="cliente"><a href="index.html">Soy cliente</a></li>
+    </ul>
   </div>
 </nav>
+
 
  <!-- Seccion Mantenimiento de piscinas -->
 
@@ -121,11 +126,11 @@
 <section class="contenido-servicio">
   <div class="container">
     <div class="contenido">
-      <div class="imagen">
+      <div class="imagen " >
         <img src="img/servicios/Mantenimiento-de-piscinas.webp" alt="Servicio de mantenimiento de piscina profesional en Guayaquil" loading="lazy">
       </div>
 
-      <div class="texto">
+      <div class="texto ">
         <h1 style="margin-bottom: 10px">Mantenimiento de Piscinas</h1>
         <p>En AQUIMPOOL PISCINAS ofrecemos servicio profesional de mantenimiento de piscinas en Guayaquil, Samborondón y alrededores. Contamos con un equipo técnico especializado que garantiza el control del pH y cloro, limpieza profunda de paredes y fondo, y revisión de equipos de filtrado, bombas y sistemas de circulación.</p>
         <p>Con más de 20 años de experiencia en el sector, utilizamos productos certificados y técnicas que aseguran el agua limpia, cristalina y segura todo el año. Trabajamos con piscinas residenciales, hoteles, clubes y centros recreativos.</p>
