@@ -17,12 +17,11 @@ const detailImg = document.getElementById("detail-img");
 const detailDate = document.getElementById("detail-date");
 const detailContent = document.getElementById("detail-content");
 
+// Cargar posts
 fetch("posts.json")
   .then(res => res.json())
   .then(data => {
     posts = data;
-
-    updateCanonical(); // ✅ mantener aquí
 
     const postId = getQueryParam("post");
 
@@ -49,9 +48,7 @@ fetch("posts.json")
     console.error("Error cargando posts.json:", err);
   });
 
-
-
-
+// Renderizar listado de posts
 function renderPosts() {
   postGrid.innerHTML = "";
   postDetail.classList.add("hidden");
@@ -81,8 +78,11 @@ function renderPosts() {
     });
     postGrid.appendChild(card);
   });
+
+  updateCanonical();
 }
 
+// Renderizar paginación
 function renderPagination() {
   pagination.innerHTML = "";
   const totalPages = Math.ceil(posts.length / postsPerPage);
@@ -97,28 +97,30 @@ function renderPagination() {
     }
     btn.addEventListener("click", () => {
       currentPage = i;
+      history.pushState(null, "", `?page=${i}`);
       renderPosts();
       renderPagination();
-      history.pushState(null, "", `?page=${i}`);
     });
     pagination.appendChild(btn);
   }
 }
 
+// Mostrar detalle de un post
 function showPostDetail(postId) {
-  const post = posts.find(p => p.id === postId);
-if (!post) {
-  postDetail.innerHTML = "<p>El post solicitado no existe.</p><button id='backBtn'>Volver al blog</button>";
-  const newBackBtn = document.getElementById("backBtn");
-  newBackBtn.addEventListener("click", () => {
-    history.pushState(null, "", "blog.html");
-    renderPosts();
-    renderPagination();
-    removeSchema();
-  });
-  return;
-}
+  const post = posts.find(p => String(p.id) === String(postId));
 
+
+  if (!post) {
+    postDetail.innerHTML = "<p>El post solicitado no existe.</p><button id='backBtn'>Volver al blog</button>";
+    const newBackBtn = document.getElementById("backBtn");
+    newBackBtn.addEventListener("click", () => {
+      history.pushState(null, "", "blog.html");
+      renderPosts();
+      renderPagination();
+      removeSchema();
+    });
+    return;
+  }
 
   detailTitle.textContent = post.titulo;
   detailImg.src = post.imagen;
@@ -130,11 +132,11 @@ if (!post) {
   postGrid.classList.add("hidden");
   pagination.classList.add("hidden");
 
-  // Insertar schema.org dinámico
   insertSchema(post);
+  updateCanonical();
 }
 
-// Botón volver al listado
+// Botón "Volver"
 backBtn.addEventListener("click", () => {
   history.pushState(null, "", "blog.html");
   renderPosts();
@@ -142,31 +144,30 @@ backBtn.addEventListener("click", () => {
   removeSchema();
 });
 
-// Función para insertar marcado JSON-LD schema.org
+// Marcar schema.org dinámico
 function insertSchema(post) {
-  removeSchema(); // Limpiar si hay alguno
+  removeSchema();
 
   const schema = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": post.titulo,
-  "image": post.imagen,
-  "author": {
-    "@type": "Organization",
-    "name": post.autor
-  },
-  "datePublished": post.fecha,
-  "publisher": {
-    "@type": "Organization",
-    "name": "Aquimpool Piscinas"
-  },
-  "description": post.resumen,
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": window.location.href
-  }
-};
-
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.titulo,
+    "image": post.imagen,
+    "author": {
+      "@type": "Organization",
+      "name": post.autor
+    },
+    "datePublished": post.fecha,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aquimpool Piscinas"
+    },
+    "description": post.resumen,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": window.location.href
+    }
+  };
 
   const script = document.createElement("script");
   script.type = "application/ld+json";
@@ -175,12 +176,13 @@ function insertSchema(post) {
   document.head.appendChild(script);
 }
 
+// Remover schema si ya existe
 function removeSchema() {
   const old = document.getElementById("jsonld-schema");
   if (old) old.remove();
 }
 
-// Manejar navegación con botón "Atrás" del navegador
+// Soporte para navegación del botón atrás del navegador
 window.addEventListener("popstate", () => {
   const postId = getQueryParam("post");
   if (postId) {
@@ -188,9 +190,11 @@ window.addEventListener("popstate", () => {
   } else {
     renderPosts();
     renderPagination();
+    removeSchema();
   }
 });
 
+// Marcar la URL canónica dinámicamente
 function updateCanonical() {
   const url = new URL(window.location.href);
   const postId = url.searchParams.get('post');
@@ -198,20 +202,14 @@ function updateCanonical() {
   let canonicalUrl;
 
   if (postId) {
-    // URL canónica para un post individual
     canonicalUrl = `${window.location.origin}${window.location.pathname}?post=${postId}`;
   } else {
-    // URL canónica para listado (sin page o con page=1)
-    // Puedes decidir dejar solo blog.html o añadir ?page=x si quieres
     const page = url.searchParams.get('page');
-    if (page && page !== '1') {
-      canonicalUrl = `${window.location.origin}${window.location.pathname}?page=${page}`;
-    } else {
-      canonicalUrl = `${window.location.origin}${window.location.pathname}`;
-    }
+    canonicalUrl = (page && page !== '1')
+      ? `${window.location.origin}${window.location.pathname}?page=${page}`
+      : `${window.location.origin}${window.location.pathname}`;
   }
 
-  // Buscar si ya existe un canonical
   let linkCanonical = document.querySelector('link[rel="canonical"]');
   if (!linkCanonical) {
     linkCanonical = document.createElement('link');
@@ -220,17 +218,3 @@ function updateCanonical() {
   }
   linkCanonical.setAttribute('href', canonicalUrl);
 }
-
-
-
-// También llama updateCanonical() dentro de los handlers donde cambias URL o renderizas página/post:
-function renderPosts() {
-  //...
-  updateCanonical();
-}
-
-function showPostDetail(postId) {
-  //...
-  updateCanonical();
-}
-

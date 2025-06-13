@@ -106,5 +106,59 @@
     "visitas": 2000,
     "resumen": "Consejos prácticos para eliminar y prevenir el crecimiento de algas.",
     "imagen": "https://via.placeholder.com/400x250?text=Piscina+12"
+  },
+  {
+    "id": "13",
+    "titulo": "¿Cómo mantener limpia tu piscina?",
+    "fecha": "2025-06-12",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Consejos prácticos para mantener el agua cristalina todo el año.",
+    "imagen": "img/servicios/instalacion-de-equipos-piscinas.webp"
+  },
+  {
+    "id": "14",
+    "titulo": "Equipos esenciales para una piscina saludable",
+    "fecha": "2025-06-10",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Descubre los dispositivos básicos que toda piscina debe tener.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+2"
+  },
+  {
+    "id": "15",
+    "titulo": "Errores comunes en el mantenimiento de piscinas",
+    "fecha": "2025-06-08",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Evita estos errores para prolongar la vida útil de tu piscina.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+3"
+  },
+  {
+    "id": "16",
+    "titulo": "Tipos de bombas para piscinas",
+    "fecha": "2025-06-06",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "Conoce las diferencias entre bombas monofásicas, trifásicas y más.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+4"
+  },
+  {
+    "id": "17",
+    "titulo": "Cloración salina vs cloro tradicional",
+    "fecha": "2025-06-04",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "¿Cuál es mejor para tu piscina? Comparativa detallada aquí.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+5"
+  },
+  {
+    "id": "18",
+    "titulo": "Revestimientos ideales para piscinas",
+    "fecha": "2025-06-02",
+    "autor": "Aquimpool Piscinas",
+    "visitas": 2000,
+    "resumen": "¿Vinil, fibra o porcelanato? Te ayudamos a decidir.",
+    "imagen": "https://via.placeholder.com/400x250?text=Piscina+6"
   }
 ]
